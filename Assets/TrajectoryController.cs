@@ -38,8 +38,9 @@ public class TrajectoryController : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.Q))
-        { 
+        {
             valueOfX += Time.deltaTime;
+            
             //Debug.Log(TextManager.Instance.combinedText);
             valueOfY = evaluator.EvaluateExpression(TextManager.Instance.combinedText, valueOfX);
 
