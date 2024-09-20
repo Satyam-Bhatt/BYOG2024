@@ -686,7 +686,7 @@ Transform:
   m_GameObject: {fileID: 238077066}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2986,6 +2986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {fileID: 119419266}
   end: {fileID: 238077067}
+  spike: {fileID: 0}
   drawingCircles:
   - {fileID: 652154907}
   - {fileID: 1803166109}
