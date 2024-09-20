@@ -22,28 +22,37 @@ public class TextManager : MonoBehaviour
     }
 
     public string combinedText = "";
+    public bool play { get; private set; } = false;
+
+    public GameObject exclamationMark;
 
     [SerializeField] private TMP_Text[] textBoxes;
     [SerializeField] private GameObject solutionPanel;
 
+    private void Awake()
+    {
+    }
+
     private void Start()
     {
         solutionPanel.SetActive(false);
+        play = false;
+        exclamationMark.SetActive(false);
     }
 
     private void CombineText()
     {
         combinedText = "";
-        if (textBoxes[0].text=="-"|| textBoxes[0].text == "+")
+        if (textBoxes[0].text == "-" || textBoxes[0].text == "+")
         {
-            textBoxes[0].text ="0"+textBoxes[0].text ;
+            textBoxes[0].text = "0 " + textBoxes[0].text;
         }
         foreach (TMP_Text text in textBoxes)
         {
             combinedText += text.text;
         }
-        
-    }   
+
+    }
     public void CommonButton(string str)
     {
         foreach (TMP_Text text in textBoxes)
@@ -83,6 +92,16 @@ public class TextManager : MonoBehaviour
     {
         solutionPanel.SetActive(true);
         solutionPanel.GetComponentInChildren<TMP_Text>().text = str;
+    }
+
+    public void Play()
+    {
+        play = true;
+    }
+
+    public void RestartScene()
+    {
+        GameManager.Instance.RestartScene();
     }
 
 }

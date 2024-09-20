@@ -5,22 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager _instance;
-    public static GameManager Instance
-    {
-        get
-        {
-            _instance = FindObjectOfType<GameManager>();
-            if (_instance == null)
-            {
-                _instance = GameObject.FindObjectOfType<GameManager>();
-            }
+    public GameObject winPanel;
 
-            return _instance;
+    public static GameManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance)
+        {
+            Destroy(this);
+            Destroy(gameObject);
+            return;
         }
+
+        Instance = this;
+        DontDestroyOnLoad(this);
     }
 
-    public GameObject winPanel;
+    public void RestartScene()
+    {
+        int sceneNum = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(sceneNum);
+    }
 
     private void Start()
     {
@@ -29,12 +35,14 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
+        winPanel.SetActive(false);
         int sceneNum = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneNum + 1);
     }
 
     public void ExitLevel()
-    { 
+    {
         Application.Quit();
     }
+
 }
