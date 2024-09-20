@@ -22,7 +22,7 @@ public class TextManager : MonoBehaviour
     }
 
     public string combinedText = "";
-    public bool play { get; private set; } = false;
+    public bool play = false;
 
     public GameObject exclamationMark;
 
