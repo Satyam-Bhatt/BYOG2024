@@ -35,8 +35,9 @@ public class GraphHandler : MonoBehaviour
     private void ExampleFunction()
     {
         for (float i = 0; i < 50; i += 0.2f)
-            //CreatePoint(new Vector2(i, Mathf.Sin(i)));
-            CreatePoint(new Vector2(i, 1f));
+        {
+            CreatePoint(new Vector2(i, Mathf.Sin(i)));
+        }
         UpdateGraph();
     }
     #endregion
