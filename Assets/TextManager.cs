@@ -24,10 +24,13 @@ public class TextManager : MonoBehaviour
     public string combinedText = "";
 
     [SerializeField] private TMP_Text[] textBoxes;
+    [SerializeField] private GameObject solutionPanel;
 
-    private void Update()
+    private void Start()
     {
+        solutionPanel.SetActive(false);
     }
+
     private void CombineText()
     {
         combinedText = "";
@@ -74,6 +77,12 @@ public class TextManager : MonoBehaviour
             text.text = "";
         }
         CombineText();
+    }
+
+    public void SolutionReveal(string str)
+    {
+        solutionPanel.SetActive(true);
+        solutionPanel.GetComponentInChildren<TMP_Text>().text = str;
     }
 
 }

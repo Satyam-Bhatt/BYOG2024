@@ -62,7 +62,7 @@ public class TrajectoryController : MonoBehaviour
         //Distance Check Between 2 Objects --------------WIN CONDITION--------------
         if (Vector2.Distance(start.localPosition, end.localPosition) < 0.01f)
         {
-            Debug.Log("Scene Number: " + SceneManager.GetActiveScene().buildIndex);
+            GameManager.Instance.winPanel.SetActive(true);
             Debug.Log("WIN");
         }
         if (spike!=null && Vector2.Distance(start.localPosition, spike.localPosition) < 0.01f)

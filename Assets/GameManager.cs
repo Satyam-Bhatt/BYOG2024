@@ -20,6 +20,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public GameObject winPanel;
+
+    private void Start()
+    {
+        winPanel.SetActive(false);
+    }
+
     public void NextLevel()
     {
         int sceneNum = SceneManager.GetActiveScene().buildIndex;
