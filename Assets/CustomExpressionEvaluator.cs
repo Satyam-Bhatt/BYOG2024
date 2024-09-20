@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class CustomExpressionEvaluator : MonoBehaviour
+public class CustomExpressionEvaluator
 {
     // Dictionary of supported mathematical functions
     private static readonly Dictionary<string, Func<double, double>> Functions = new Dictionary<string, Func<double, double>>
