@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class CustomExpressionEvaluator : MonoBehaviour
+public class CustomExpressionEvaluator
 {
     // Dictionary of supported mathematical functions
     private static readonly Dictionary<string, Func<double, double>> Functions = new Dictionary<string, Func<double, double>>
@@ -18,14 +18,22 @@ public class CustomExpressionEvaluator : MonoBehaviour
     // Main method to evaluate an expression
     public float EvaluateExpression(string expression, float x)
     {
-        // Replace 'x' in the expression with its numeric value
-        expression = expression.Replace("x", x.ToString());
-        // Convert the expression into tokens
-        var tokens = Tokenize(expression);
-        // Convert infix notation to postfix notation
-        var postfix = ShuntingYard(tokens);
-        // Evaluate the postfix expression and return the result as a float
-        return (float)EvaluatePostfix(postfix);
+        try
+        {
+            // Replace 'x' in the expression with its numeric value
+            expression = expression.Replace("x", x.ToString());
+            // Convert the expression into tokens
+            var tokens = Tokenize(expression);
+            // Convert infix notation to postfix notation
+            var postfix = ShuntingYard(tokens);
+            // Evaluate the postfix expression and return the result as a float
+            return (float)EvaluatePostfix(postfix);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Error evaluating expression: {e.Message}");
+            return float.NaN; // Return NaN to indicate an error
+        }
     }
 
     // Convert the expression string into a list of tokens
@@ -39,7 +47,7 @@ public class CustomExpressionEvaluator : MonoBehaviour
             .Replace("*", " * ")
             .Replace("/", " / ")
             .Replace("^", " ^ ")
-            .Replace("%", " % ") // Add support for modulo operator
+            .Replace("%", " % ")
             .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
             .ToList();
     }
@@ -70,18 +78,28 @@ public class CustomExpressionEvaluator : MonoBehaviour
             else if (token == ")")
             {
                 // If the token is a right parenthesis, pop operators to output until we find a left parenthesis
-                while (operators.Count > 0 && operators.Peek() != "(")
+                bool foundLeftParenthesis = false;
+                while (operators.Count > 0)
                 {
-                    output.Add(operators.Pop());
+                    string op = operators.Pop();
+                    if (op == "(")
+                    {
+                        foundLeftParenthesis = true;
+                        break;
+                    }
+                    output.Add(op);
                 }
-                operators.Pop(); // Remove the left parenthesis
+                if (!foundLeftParenthesis)
+                {
+                    throw new ArgumentException("Mismatched parentheses");
+                }
                 if (operators.Count > 0 && Functions.ContainsKey(operators.Peek()))
                 {
                     // If there's a function at the top of the operator stack, add it to the output
                     output.Add(operators.Pop());
                 }
             }
-            else // The token is an operator
+            else if (IsOperator(token))
             {
                 // Pop operators with higher or equal precedence to the output
                 while (operators.Count > 0 && Precedence(operators.Peek()) >= Precedence(token))
@@ -90,11 +108,19 @@ public class CustomExpressionEvaluator : MonoBehaviour
                 }
                 operators.Push(token);
             }
+            else
+            {
+                throw new ArgumentException($"Unknown token: {token}");
+            }
         }
 
         // Pop any remaining operators to the output
         while (operators.Count > 0)
         {
+            if (operators.Peek() == "(")
+            {
+                throw new ArgumentException("Mismatched parentheses");
+            }
             output.Add(operators.Pop());
         }
 
@@ -116,19 +142,42 @@ public class CustomExpressionEvaluator : MonoBehaviour
             else if (Functions.ContainsKey(token))
             {
                 // If the token is a function, apply it to the top value on the stack
+                if (stack.Count < 1)
+                {
+                    throw new ArgumentException($"Not enough operands for function: {token}");
+                }
                 stack.Push(Functions[token](stack.Pop()));
             }
-            else // The token is an operator
+            else if (IsOperator(token))
             {
-                // Pop two values, apply the operator, and push the result back
+                // If the token is an operator, apply it to the top two values on the stack
+                if (stack.Count < 2)
+                {
+                    throw new ArgumentException($"Not enough operands for operator: {token}");
+                }
                 var b = stack.Pop();
                 var a = stack.Pop();
                 stack.Push(ApplyOperator(token, a, b));
             }
+            else
+            {
+                throw new ArgumentException($"Unknown token in postfix evaluation: {token}");
+            }
         }
 
         // The final value on the stack is the result
+        if (stack.Count != 1)
+        {
+            throw new ArgumentException("Invalid expression: too many operands");
+        }
+
         return stack.Pop();
+    }
+
+    // Check if a token is an operator
+    private static bool IsOperator(string token)
+    {
+        return token == "+" || token == "-" || token == "*" || token == "/" || token == "^" || token == "%";
     }
 
     // Determine the precedence of operators
@@ -137,7 +186,7 @@ public class CustomExpressionEvaluator : MonoBehaviour
         return op switch
         {
             "+" or "-" => 1,
-            "*" or "/" or "%" => 2, // Add modulo with same precedence as multiplication
+            "*" or "/" or "%" => 2,
             "^" => 3,
             _ => 0,
         };
@@ -151,10 +200,10 @@ public class CustomExpressionEvaluator : MonoBehaviour
             "+" => a + b,
             "-" => a - b,
             "*" => a * b,
-            "/" => a / b,
+            "/" => b == 0 ? throw new DivideByZeroException("Division by zero") : a / b,
             "^" => Math.Pow(a, b),
-            "%" => a % b, // Add support for modulo operation
-            _ => throw new ArgumentException("Unknown operator"),
+            "%" => b == 0 ? throw new DivideByZeroException("Modulo by zero") : a % b,
+            _ => throw new ArgumentException($"Unknown operator: {op}"),
         };
     }
 }

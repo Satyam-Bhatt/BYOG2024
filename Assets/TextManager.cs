@@ -89,4 +89,30 @@ public class TextManager : MonoBehaviour
         CombineText();
     }
 
+    public void OneButton()
+    {
+        foreach (TMP_Text text in textBoxes)
+        {
+            if (text.text == "")
+            {
+                text.text = "1";
+                break;
+            }
+        }
+        CombineText();
+    }
+
+    public void BackSpace()
+    {
+        for (int i = textBoxes.Length - 1; i >= 0; i--)
+        {
+            if (textBoxes[i].text != "")
+            {
+                textBoxes[i].text = "";
+                break;
+            }
+        }
+        CombineText();
+    }
+
 }
