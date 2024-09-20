@@ -22,6 +22,15 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    private void OnEnable()
+    {
+        SceneManager.activeSceneChanged += NewScene;
+    }
+    private void OnDisable()
+    {
+        SceneManager.activeSceneChanged -= NewScene;
+    }
+
     public void RestartScene()
     {
         int sceneNum = SceneManager.GetActiveScene().buildIndex;
@@ -35,7 +44,13 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        winPanel.SetActive(false);
+        if (winPanel != null)
+        {
+            winPanel.SetActive(false);
+        }
+        else {
+            winPanel = TextManager.Instance.winPanel;
+        }
         int sceneNum = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneNum + 1);
     }
@@ -44,5 +59,13 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void NewScene(Scene scene, Scene scene2)
+    {
+        //Debug.Log("Call");
+        winPanel = TextManager.Instance.winPanel;
+    }
+
+    
 
 }

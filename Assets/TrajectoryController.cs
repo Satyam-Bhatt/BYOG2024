@@ -70,9 +70,11 @@ public class TrajectoryController : MonoBehaviour
         //Distance Check Between 2 Objects --------------WIN CONDITION--------------
         if (Vector2.Distance(start.localPosition, end.localPosition) < 0.05f)
         {
+            LevelManger.Instance.CoinCheck();
             if (LevelManger.Instance.allCoinCollected)
             { 
                 GameManager.Instance.winPanel.SetActive(true);
+                TextManager.Instance.winPanel.SetActive(true);
                 TextManager.Instance.play = false;
             }
             Debug.Log("WIN");

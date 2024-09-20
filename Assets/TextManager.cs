@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class TextManager : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class TextManager : MonoBehaviour
     public bool play = false;
 
     public GameObject exclamationMark;
+    public GameObject winPanel;
 
     [SerializeField] private TMP_Text[] textBoxes;
     [SerializeField] private GameObject solutionPanel;
@@ -38,6 +40,12 @@ public class TextManager : MonoBehaviour
         solutionPanel.SetActive(false);
         play = false;
         exclamationMark.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        winPanel.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(NextLevel);
+        winPanel.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(QuitGame);
     }
 
     private void CombineText()
@@ -102,6 +110,15 @@ public class TextManager : MonoBehaviour
     public void RestartScene()
     {
         GameManager.Instance.RestartScene();
+    }
+
+    public void NextLevel()
+    {
+        GameManager.Instance.NextLevel();
+    }
+    public void QuitGame()
+    {
+        GameManager.Instance.ExitLevel();
     }
 
 }
