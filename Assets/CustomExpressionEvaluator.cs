@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class CustomExpressionEvaluator
+public class CustomExpressionEvaluator : MonoBehaviour
 {
     // Dictionary of supported mathematical functions
     private static readonly Dictionary<string, Func<double, double>> Functions = new Dictionary<string, Func<double, double>>
@@ -22,6 +22,10 @@ public class CustomExpressionEvaluator
         {
             // Replace 'x' in the expression with its numeric value
             expression = expression.Replace("x", x.ToString());
+            // HIGHLIGHT START
+            // Replace 'Pi' or 'pi' with its numeric value
+            expression = expression.Replace("Pi", Math.PI.ToString());
+            // HIGHLIGHT END
             // Convert the expression into tokens
             var tokens = Tokenize(expression);
             // Convert infix notation to postfix notation
@@ -39,17 +43,20 @@ public class CustomExpressionEvaluator
     // Convert the expression string into a list of tokens
     private static List<string> Tokenize(string expression)
     {
-        return new string(expression.Where(c => !char.IsWhiteSpace(c)).ToArray())
-            .Replace("(", " ( ")
-            .Replace(")", " ) ")
-            .Replace("+", " + ")
-            .Replace("-", " - ")
-            .Replace("*", " * ")
-            .Replace("/", " / ")
-            .Replace("^", " ^ ")
-            .Replace("%", " % ")
+        // HIGHLIGHT START
+        // Add support for multi-character tokens (like Pi)
+        return new string(expression
+                .Replace("(", " ( ")
+                .Replace(")", " ) ")
+                .Replace("+", " + ")
+                .Replace("-", " - ")
+                .Replace("*", " * ")
+                .Replace("/", " / ")
+                .Replace("^", " ^ ")
+                .Replace("%", " % "))
             .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
             .ToList();
+        // HIGHLIGHT END
     }
 
     // Implement the Shunting Yard algorithm to convert infix to postfix notation
