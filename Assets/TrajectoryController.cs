@@ -6,6 +6,7 @@ public class TrajectoryController : MonoBehaviour
 {
     public Transform start;
     public Transform end;
+    public Transform spike;
 
     float valueOfX = 0;
     float valueOfY = 0;
@@ -36,7 +37,7 @@ public class TrajectoryController : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Q))
         { 
             valueOfX += Time.deltaTime;
             //Debug.Log(TextManager.Instance.combinedText);
@@ -60,6 +61,10 @@ public class TrajectoryController : MonoBehaviour
         if (Vector2.Distance(start.localPosition, end.localPosition) < 0.01f)
         {
             Debug.Log("WIN");
+        }
+        if (spike!=null && Vector2.Distance(start.localPosition, spike.localPosition) < 0.01f)
+        {
+            Debug.Log("DEAD");
         }
 
     }

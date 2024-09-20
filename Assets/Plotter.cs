@@ -79,9 +79,63 @@ public class Plotter : MonoBehaviour
             cout = 2.0f;
             for (int i = 0; i < Cot.Length; i++)
             {
-                Cot[i].transform.position = new Vector3(x + xinc, y + (aout * ((x + xinc) + cin))%cout, 0);
+                Cot[i].transform.position = new Vector3(x + xinc, y + 1+(aout * ((x + xinc) + cin))%cout, 0);
                 x += xinc;
             }
         }
     }
+
+
+   /* public float Plot(float x)
+    {
+        if (f1 == functions.k)
+        {
+            for (int i = 0; i < Cot.Length; i++)
+            {
+                y = y;
+                x += xinc;
+            }
+        }
+        else if (f1 == functions.cos)
+        {
+            for (int i = 0; i < Cot.Length; i++)
+            {
+                Cot[i].transform.position = new Vector3(x + xinc, y + aout * Mathf.Cos(ain * (x + xinc) + cin) + cout, 0);
+                x += xinc;
+            }
+        }
+        else if (f1 == functions.sin)
+        {
+            for (int i = 0; i < Cot.Length; i++)
+            {
+                Cot[i].transform.position = new Vector3(x + xinc, y + aout * Mathf.Sin(ain * (x + xinc) + cin) + cout, 0);
+                x += xinc;
+            }
+        }
+        else if (f1 == functions.quad)
+        {
+            for (int i = 0; i < Cot.Length; i++)
+            {
+                Cot[i].transform.position = new Vector3(x + xinc, y + aout * ((x + xinc) + cin) * ((x + xinc) + cin) + cout, 0);
+                x += xinc;
+            }
+        }
+        else if (f1 == functions.cube)
+        {
+            for (int i = 0; i < Cot.Length; i++)
+            {
+                Cot[i].transform.position = new Vector3(x + xinc, y + aout * ((x + xinc) + cin) * ((x + xinc) + cin) * ((x + xinc) + cin) + cout, 0);
+                x += xinc;
+            }
+        }
+        else if (f1 == functions.mod)
+        {
+            cout = 2.0f;
+            for (int i = 0; i < Cot.Length; i++)
+            {
+                Cot[i].transform.position = new Vector3(x + xinc, y + 1 + (aout * ((x + xinc) + cin)) % cout, 0);
+                x += xinc;
+            }
+        }
+    }*/
 }
