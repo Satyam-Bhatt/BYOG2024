@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TrajectoryController : MonoBehaviour
 {
@@ -61,6 +62,7 @@ public class TrajectoryController : MonoBehaviour
         //Distance Check Between 2 Objects --------------WIN CONDITION--------------
         if (Vector2.Distance(start.localPosition, end.localPosition) < 0.01f)
         {
+            Debug.Log("Scene Number: " + SceneManager.GetActiveScene().buildIndex);
             Debug.Log("WIN");
         }
         if (spike!=null && Vector2.Distance(start.localPosition, spike.localPosition) < 0.01f)
