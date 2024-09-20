@@ -4018,6 +4018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combinedText: 
+  play: 0
   exclamationMark: {fileID: 3532302427306239916}
   textBoxes:
   - {fileID: 602244677437798228}
@@ -8438,10 +8439,10 @@ RectTransform:
   - {fileID: 423094317123283746}
   m_Father: {fileID: 5832790967839091098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1837, y: -1038}
-  m_SizeDelta: {x: 134.3362, y: 57.7314}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 89, y: 42.772}
+  m_SizeDelta: {x: 134.33618, y: 57.731384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4002210038605160013
 CanvasRenderer:
@@ -8993,7 +8994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -557.5, y: -0.000005874187}
+  m_AnchoredPosition: {x: -557.5, y: 0.0003875897}
   m_SizeDelta: {x: 557.5, y: 376.3625}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &8304739224624532846
@@ -10011,10 +10012,10 @@ RectTransform:
   - {fileID: 7310684386933797735}
   m_Father: {fileID: 5832790967839091098}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -51.7878, y: -497.22797}
-  m_SizeDelta: {x: -1389.3181, y: -994.456}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 42.772034}
+  m_SizeDelta: {x: 530.6819, y: 85.54401}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8222705711988759038
 CanvasRenderer:
