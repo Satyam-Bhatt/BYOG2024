@@ -71,10 +71,9 @@ public class TrajectoryController : MonoBehaviour
         //Distance Check Between 2 Objects --------------WIN CONDITION--------------
         if (Vector2.Distance(start.localPosition, end.localPosition) < 0.2f)
         {
-            
+            LevelManger.Instance.CoinCheck();
             if (LevelManger.Instance.allCoinCollected)
             {
-                LevelManger.Instance.CoinCheck();
                 if (LevelManger.Instance.levelName == "Level 40")
                 {
                     TextManager.Instance.endScreen.SetActive(true);
@@ -83,12 +82,12 @@ public class TrajectoryController : MonoBehaviour
                 {
                     GameManager.Instance.winPanel.SetActive(true);
                     TextManager.Instance.winPanel.SetActive(true);
-                    TextManager.Instance.play = false;                
+                    TextManager.Instance.play = false;
                 }
 
                 if (callOnce)
                 {
-                    LevelManger.Instance.CoinCheck();
+                    LevelManger.Instance.ClipPlay_Immediate(1);
                     callOnce = false;
                 }
             }

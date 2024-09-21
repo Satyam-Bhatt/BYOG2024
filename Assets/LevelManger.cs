@@ -56,7 +56,7 @@ public class LevelManger : MonoBehaviour
     public void CoinCheck()
     {
         int num = FindObjectsOfType<CoinCollectScript>().Count();
-        Debug.Log(num);
+        //Debug.Log(num);
         if(num <= 0)
         {
             allCoinCollected = true;
