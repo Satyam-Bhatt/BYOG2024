@@ -11,7 +11,10 @@ public class CoinCollectScript : MonoBehaviour
 
     private void Start()
     {
-        coinText.text = coinValue.ToString();
+        if (coinText != null)
+        { 
+            coinText.text = coinValue.ToString();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,7 +28,7 @@ public class CoinCollectScript : MonoBehaviour
                 Destroy(this.gameObject);
             }
 
-            if (coinValue > 0)
+            if (coinText != null && coinValue > 0)
             { 
                 coinText.text = coinValue.ToString();
             }
