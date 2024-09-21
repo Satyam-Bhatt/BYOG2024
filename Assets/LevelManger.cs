@@ -21,6 +21,7 @@ public class LevelManger : MonoBehaviour
     }
 
     public bool allCoinCollected = false;
+    public float speed = 1f;
 
     [SerializeField] private GameObject[] toDisable;
     [SerializeField] private GameObject[] toEnable;

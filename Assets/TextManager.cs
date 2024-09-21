@@ -99,7 +99,9 @@ public class TextManager : MonoBehaviour
     public void SolutionReveal(string str)
     {
         solutionPanel.SetActive(true);
-        solutionPanel.GetComponentInChildren<TMP_Text>().text = str;
+        GameObject g =GameObject.Find("SolutionMain");
+        g.GetComponent<TMP_Text>().text = str;
+        combinedText = str;
     }
 
     public void Play()

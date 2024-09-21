@@ -48,7 +48,7 @@ public class TrajectoryController : MonoBehaviour
 
         if (TextManager.Instance.play)
         {
-            valueOfX += Time.deltaTime;
+            valueOfX += Time.deltaTime * LevelManger.Instance.speed;
 
             //Debug.Log(TextManager.Instance.combinedText);
             valueOfY = evaluator.EvaluateExpression(TextManager.Instance.combinedText, valueOfX);
