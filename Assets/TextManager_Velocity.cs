@@ -61,10 +61,6 @@ public class TextManager_Velocity : MonoBehaviour
         exclamationMark_Vel.SetActive(false);
     }
 
-    private void Update()
-    {
-    }
-
     private void OnEnable()
     {
         winPanel.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(NextLevel);
@@ -95,6 +91,10 @@ public class TextManager_Velocity : MonoBehaviour
             else {
                 velocityText += text.text;
             }
+        }
+        if (textBoxes[0].text == "0 -" || textBoxes[0].text == "0 +")
+        {
+            textBoxes[0].text = textBoxes[0].text.ToCharArray()[2].ToString();
         }
 
     }

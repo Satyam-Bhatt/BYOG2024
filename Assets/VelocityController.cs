@@ -12,13 +12,9 @@ public class VelocityController : MonoBehaviour
     float valueOfY = 0;
     float SumTime = 0;
 
-
-    public string velocityEquation = "5*x";
-
     CustomExpressionEvaluator evaluator;
 
     public Transform[] drawingCircles;
-    public Transform[] VelocityCircles;
 
     private void Start()
     {
@@ -86,14 +82,17 @@ public class VelocityController : MonoBehaviour
         //valueOfY = func; //valueOfX % 2; //Mathf.Sin(valueOfX);
 
         //Distance Check Between 2 Objects --------------WIN CONDITION--------------
-        if (Vector2.Distance(start.localPosition, end.localPosition) < 0.05f)
+        if (Vector2.Distance(start.localPosition, end.localPosition) < 0.5f)
         {
+            Debug.Log("WIN");
+            LevelManger.Instance.CoinCheck();
             if (LevelManger.Instance.allCoinCollected)
             {
                 GameManager.Instance.winPanel.SetActive(true);
+                TextManager_Velocity.Instance.winPanel.SetActive(true);
                 TextManager_Velocity.Instance.play = false;
             }
-            Debug.Log("WIN");
+
         }
 
     }
