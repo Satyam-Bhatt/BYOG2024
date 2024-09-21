@@ -25,6 +25,7 @@ public class LevelManger : MonoBehaviour
     public float speed = 1f;
     public float YScale_velocityGraph = 1f;
     public RaycastHit2D hit;
+    public AudioSource audioSource;
 
     public GameObject coordinatePlane;
 
@@ -43,10 +44,19 @@ public class LevelManger : MonoBehaviour
     public string trajSolution = "";
     public string velSolution = "";
 
+    [Space(10)]
+    [Header("AUDIO STUFF")]
+    public AudioCaption[] audioCaption;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void CoinCheck()
     {
         int num = FindObjectsOfType<CoinCollectScript>().Count();
-        //Debug.Log(num);
+        Debug.Log(num);
         if(num <= 0)
         {
             allCoinCollected = true;
@@ -66,6 +76,8 @@ public class LevelManger : MonoBehaviour
         { 
             obj.SetActive(true);
         }
+
+        ClipPlay_Immediate(0);
     }
 
     // Update is called once per frame
@@ -83,6 +95,35 @@ public class LevelManger : MonoBehaviour
         else
         {
             coordinatePlane.SetActive(false);
+        }
+    }
+
+    public void ClipPlay_Immediate(int clipIndex)
+    {
+        audioSource.Stop();
+        audioSource.PlayOneShot(audioCaption[clipIndex].audioClip);
+        TextManager.Instance.captionPanel.SetActive(true);
+        //captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text = audioCaption[clipIndex].caption;
+        float closeTime = audioCaption[clipIndex].audioClip.length;
+
+        StopAllCoroutines();
+        StartCoroutine(CloseCaption(closeTime + 0.5f));
+        StartCoroutine(CharacterDialogue(audioCaption[clipIndex].caption));
+    }
+
+    IEnumerator CloseCaption(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        TextManager.Instance.captionPanel.SetActive(false);
+    }
+
+    IEnumerator CharacterDialogue(string dialogue)
+    {
+        TextManager.Instance.captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text = "";
+        foreach (char letter in dialogue.ToCharArray())
+        {
+            TextManager.Instance.captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text += letter;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }
