@@ -8521,8 +8521,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a31aed28d77c71744828d870654658de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   start: {fileID: 0}
   end: {fileID: 0}
+=======
+  start: {fileID: 1700295138}
+  end: {fileID: 851299830}
+>>>>>>> 9a7b3390b6d3932478b4ab22d3ecc6e7b4a167fb
   spike: {fileID: 0}
   Graph: {fileID: 0}
   velocityEquation: 
@@ -16385,6 +16390,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allCoinCollected: 0
+<<<<<<< HEAD
+=======
+  toDisable: []
+  toEnable: []
+>>>>>>> 9a7b3390b6d3932478b4ab22d3ecc6e7b4a167fb
 --- !u!4 &684812287
 Transform:
   m_ObjectHideFlags: 0
