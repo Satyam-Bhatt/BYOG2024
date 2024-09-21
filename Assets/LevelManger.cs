@@ -6,8 +6,6 @@ using TMPro;
 
 public class LevelManger : MonoBehaviour
 {
-    
-
     private static LevelManger _instance;
     public static LevelManger Instance
     {
@@ -42,7 +40,7 @@ public class LevelManger : MonoBehaviour
     {
         int num = FindObjectsOfType<CoinCollectScript>().Count();
         //Debug.Log(num);
-        if(num-1 <= 0)
+        if(num <= 0)
         {
             allCoinCollected = true;
         }
