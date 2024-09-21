@@ -8092,6 +8092,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3274248412013332707}
   - {fileID: 1162673504358360686}
   - {fileID: 2641834740858496399}
   - {fileID: 7850730406643913882}
@@ -8101,7 +8102,6 @@ RectTransform:
   - {fileID: 4110009889662213354}
   - {fileID: 7510060885540277035}
   - {fileID: 8220751901399922503}
-  - {fileID: 3274248412013332707}
   - {fileID: 8480710726123266242}
   - {fileID: 6747681600839893799}
   m_Father: {fileID: 7860450088955091341}
