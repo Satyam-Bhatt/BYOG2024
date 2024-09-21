@@ -67,7 +67,7 @@ public class TrajectoryController : MonoBehaviour
         //valueOfY = func; //valueOfX % 2; //Mathf.Sin(valueOfX);
 
         //Distance Check Between 2 Objects --------------WIN CONDITION--------------
-        if (Vector2.Distance(start.localPosition, end.localPosition) < 0.1f)
+        if (Vector2.Distance(start.localPosition, end.localPosition) < 0.2f)
         {
             LevelManger.Instance.CoinCheck();
             if (LevelManger.Instance.allCoinCollected)

@@ -19592,7 +19592,7 @@ MonoBehaviour:
   - {fileID: 1273055443}
   chapterName: Chapter 1
   levelName: Level 31
-  trajectory_OnlySolution: cos(pi*x)
+  trajectory_OnlySolution: cos(Pi*x)
   trajSolution: 
   velSolution: 
 --- !u!4 &1684696218

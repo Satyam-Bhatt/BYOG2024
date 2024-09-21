@@ -19449,7 +19449,7 @@ MonoBehaviour:
   - {fileID: 1814500427}
   chapterName: Chapter 1
   levelName: Level 27
-  trajectory_OnlySolution: sin(pi*x/2)
+  trajectory_OnlySolution: sin(Pi*x/2)
   trajSolution: 
   velSolution: 
 --- !u!4 &1684696218

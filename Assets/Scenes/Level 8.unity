@@ -15216,7 +15216,7 @@ MonoBehaviour:
   - {fileID: 875383351}
   chapterName: Chapter 1
   levelName: Level 8
-  trajectory_OnlySolution: 2x
+  trajectory_OnlySolution: 2*x
   trajSolution: 
   velSolution: 
 --- !u!4 &1296735954

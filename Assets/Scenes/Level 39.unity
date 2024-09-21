@@ -21315,7 +21315,7 @@ MonoBehaviour:
   toEnable: []
   chapterName: Chapter 1
   levelName: Level 39
-  trajectory_OnlySolution: 2*x%5
+  trajectory_OnlySolution: 2*(x%5)
   trajSolution: 
   velSolution: 
 --- !u!4 &1878424172

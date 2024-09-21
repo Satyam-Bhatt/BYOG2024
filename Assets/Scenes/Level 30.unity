@@ -11218,6 +11218,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &734995962
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1508727539430344601, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 813.25104
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 852.6382
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.184496
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
 --- !u!1 &744000145
 GameObject:
   m_ObjectHideFlags: 0
@@ -25436,7 +25493,7 @@ MonoBehaviour:
   - {fileID: 1814500427}
   chapterName: Chapter 1
   levelName: Level 30
-  trajectory_OnlySolution: 4*sin(pi/2-pi*x/4)
+  trajectory_OnlySolution: 4*sin(Pi/2-Pi*x/4)
   trajSolution: 
   velSolution: 
 --- !u!4 &1684696218
@@ -32321,6 +32378,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4202627312289912803, guid: c8882d00290eef84b8571cb9130d2f65, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5494724530013378289, guid: c8882d00290eef84b8571cb9130d2f65, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -34446,3 +34507,4 @@ SceneRoots:
   - {fileID: 1386855713}
   - {fileID: 2038595460}
   - {fileID: 2081490518}
+  - {fileID: 734995962}

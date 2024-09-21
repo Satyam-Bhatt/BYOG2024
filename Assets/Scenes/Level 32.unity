@@ -19700,7 +19700,7 @@ MonoBehaviour:
   - {fileID: 1814500427}
   chapterName: Chapter 1
   levelName: Level 32
-  trajectory_OnlySolution: 2*cos(pi*x + pi/4)
+  trajectory_OnlySolution: 2*cos(Pi*x + Pi/4)
   trajSolution: 
   velSolution: 
 --- !u!4 &1684696218

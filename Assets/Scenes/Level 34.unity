@@ -1200,7 +1200,7 @@ MonoBehaviour:
   - {fileID: 1153929160}
   chapterName: Chapter 1
   levelName: Level 34
-  trajectory_OnlySolution: sin(pi*x)+x
+  trajectory_OnlySolution: sin(Pi*x)+x
   trajSolution: 
   velSolution: 
 --- !u!4 &58851552

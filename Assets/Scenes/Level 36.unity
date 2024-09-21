@@ -8117,6 +8117,7 @@ MonoBehaviour:
   toEnable: []
   chapterName: Chapter 1
   levelName: Level 36
+  trajectory_OnlySolution: 
   trajSolution: x
   velSolution: sin(x) * 3
 --- !u!4 &684812287
@@ -25374,7 +25375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6397217612069991938, guid: 60831828289d68244b01db44e6dbfcfb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000010329965
+      value: 0.00050724734
       objectReference: {fileID: 0}
     - target: {fileID: 6489356988302739977, guid: 60831828289d68244b01db44e6dbfcfb, type: 3}
       propertyPath: m_Pivot.x

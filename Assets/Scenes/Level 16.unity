@@ -12167,7 +12167,7 @@ MonoBehaviour:
   - {fileID: 13881748}
   chapterName: Chapter 1
   levelName: Level 16
-  trajectory_OnlySolution: x^2+7
+  trajectory_OnlySolution: 7-x^2
   trajSolution: 
   velSolution: 
 --- !u!4 &980187143
