@@ -5,7 +5,7 @@ using UnityEngine;
 public class DrawVelocityGraph : MonoBehaviour
 {
     public Transform[] velocityPoints;
-    public string velocityText;
+    //public string velocityText;
 
     CustomExpressionEvaluator evaluator;
 
@@ -22,7 +22,7 @@ public class DrawVelocityGraph : MonoBehaviour
         float t = 0;
         for (int i = 0; i < velocityPoints.Length; i++)
         {
-            float v_Value = LevelManger.Instance.YScale_velocityGraph * evaluator.EvaluateExpression(velocityText, t);
+            float v_Value = LevelManger.Instance.YScale_velocityGraph * evaluator.EvaluateExpression(TextManager_Velocity.Instance.velocityText, t);
             if (!float.IsNaN(v_Value))
             {
                 velocityPoints[i].localPosition = new Vector3(t, v_Value, 0);

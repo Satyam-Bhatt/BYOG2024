@@ -7,8 +7,6 @@ public class VelocityController : MonoBehaviour
 {
     public Transform start;
     public Transform end;
-    public Transform spike;
-    public Transform Graph;
 
     float valueOfX = 0;
     float valueOfY = 0;
@@ -39,7 +37,7 @@ public class VelocityController : MonoBehaviour
             {
                 break;
             }
-            float y_Value = evaluator.EvaluateExpression(TextManager.Instance.combinedText, placer);
+            float y_Value = evaluator.EvaluateExpression(TextManager_Velocity.Instance.trajectoryText, placer);
             if (!float.IsNaN(y_Value))
             {
                 drawingCircles[i].localPosition = new Vector3(placer, y_Value, 0);
@@ -54,26 +52,7 @@ public class VelocityController : MonoBehaviour
             }
         }
 
-        //DRAWING VELOCITY
-        float tinc = 15.0f / VelocityCircles.Length;
-        float Yscale = 1.0f;
-        float t = 0;
-        for (int i = 0; i < VelocityCircles.Length; i++)
-        {
-            float v_Value = Yscale * evaluator.EvaluateExpression(velocityEquation, t);
-            if (!float.IsNaN(v_Value))
-            {
-                VelocityCircles[i].localPosition = new Vector3(t, v_Value, 0);
-            }
-            else
-            {
-                VelocityCircles[i].localPosition = new Vector3(0, 0, 0);
-                Debug.LogError("Failed to evaluate expression");
-            }
-            t += tinc;
-        }
-
-        if (TextManager.Instance.play)
+        if (TextManager_Velocity.Instance.play)
         {
             SumTime += Time.deltaTime;
 
@@ -85,11 +64,11 @@ public class VelocityController : MonoBehaviour
             {
                 }*/
 
-            valueOfX += Time.deltaTime * evaluator.EvaluateExpression(velocityEquation, SumTime);
+            valueOfX += Time.deltaTime * evaluator.EvaluateExpression(TextManager_Velocity.Instance.velocityText, SumTime);
 
 
             //Debug.Log(TextManager.Instance.combinedText);
-            valueOfY = evaluator.EvaluateExpression(TextManager.Instance.combinedText, valueOfX);
+            valueOfY = evaluator.EvaluateExpression(TextManager_Velocity.Instance.trajectoryText, valueOfX);
 
             if (!float.IsNaN(valueOfY))
             {
@@ -115,10 +94,6 @@ public class VelocityController : MonoBehaviour
                 TextManager.Instance.play = false;
             }
             Debug.Log("WIN");
-        }
-        if (spike != null && Vector2.Distance(start.localPosition, spike.localPosition) < 0.01f)
-        {
-            Debug.Log("DEAD");
         }
 
     }
