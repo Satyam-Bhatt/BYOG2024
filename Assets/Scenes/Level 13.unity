@@ -8228,6 +8228,8 @@ MonoBehaviour:
   toEnable:
   - {fileID: 1604636620}
   - {fileID: 4317822510879560647}
+  chapterName: Chapter 1
+  levelName: Level 13
   trajSolution: 0
   velSolution: 0-5
 --- !u!4 &684812287

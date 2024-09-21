@@ -8115,6 +8115,8 @@ MonoBehaviour:
   - {fileID: 1313731149}
   - {fileID: 1500474935}
   toEnable: []
+  chapterName: Chapter 1
+  levelName: Level 36
   trajSolution: x
   velSolution: sin(x) * 3
 --- !u!4 &684812287

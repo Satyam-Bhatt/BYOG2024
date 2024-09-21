@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TextManager : MonoBehaviour
 {
@@ -30,6 +31,9 @@ public class TextManager : MonoBehaviour
 
     [SerializeField] private TMP_Text[] textBoxes;
     [SerializeField] private GameObject solutionPanel;
+    [SerializeField] private TMP_Text chapterName;
+    [SerializeField] private TMP_Text levelName;
+    public GameObject endScreen;
 
     private void Awake()
     {
@@ -40,6 +44,10 @@ public class TextManager : MonoBehaviour
         solutionPanel.SetActive(false);
         play = false;
         exclamationMark.SetActive(false);
+        endScreen.SetActive(false);
+
+        chapterName.text = LevelManger.Instance.chapterName;
+        levelName.text = LevelManger.Instance.levelName;
     }
 
     private void OnEnable()
@@ -96,12 +104,12 @@ public class TextManager : MonoBehaviour
         CombineText();
     }
 
-    public void SolutionReveal(string str)
+    public void SolutionReveal()
     {
         solutionPanel.SetActive(true);
         GameObject g =GameObject.Find("SolutionMain");
-        g.GetComponent<TMP_Text>().text = str;
-        combinedText = str;
+        g.GetComponent<TMP_Text>().text = LevelManger.Instance.trajectory_OnlySolution;
+        combinedText = LevelManger.Instance.trajectory_OnlySolution;
     }
 
     public void Play()
@@ -121,6 +129,11 @@ public class TextManager : MonoBehaviour
     public void QuitGame()
     {
         GameManager.Instance.ExitLevel();
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
     }
 
 }

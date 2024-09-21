@@ -71,10 +71,17 @@ public class TrajectoryController : MonoBehaviour
         {
             LevelManger.Instance.CoinCheck();
             if (LevelManger.Instance.allCoinCollected)
-            { 
-                GameManager.Instance.winPanel.SetActive(true);
-                TextManager.Instance.winPanel.SetActive(true);
-                TextManager.Instance.play = false;
+            {
+                if (LevelManger.Instance.levelName == "Level 40")
+                {
+                    TextManager.Instance.endScreen.SetActive(true);
+                }
+                else
+                { 
+                    GameManager.Instance.winPanel.SetActive(true);
+                    TextManager.Instance.winPanel.SetActive(true);
+                    TextManager.Instance.play = false;                
+                }
             }
             Debug.Log("WIN");
         }

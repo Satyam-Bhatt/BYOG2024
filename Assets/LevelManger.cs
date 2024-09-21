@@ -31,6 +31,13 @@ public class LevelManger : MonoBehaviour
     [SerializeField] private GameObject[] toDisable;
     [SerializeField] private GameObject[] toEnable;
 
+    public string chapterName = "Chapter 1";
+    public string levelName = "Level 1";
+
+    [Space(10)]
+    [Header("FOR TRAJECTORY LEVEL ONLY")]
+    public string trajectory_OnlySolution = "";
+
     [Space(10)]
     [Header("FOR VELOCITY LEVEL ONLY")]
     public string trajSolution = "";

@@ -19698,6 +19698,9 @@ MonoBehaviour:
   - {fileID: 476894699}
   - {fileID: 1273055443}
   - {fileID: 1814500427}
+  chapterName: Chapter 1
+  levelName: Level 32
+  trajectory_OnlySolution: 2*cos(pi*x + pi/4)
   trajSolution: 
   velSolution: 
 --- !u!4 &1684696218
@@ -26016,6 +26019,10 @@ PrefabInstance:
     - target: {fileID: 7850730406643913882, guid: e6ef9a867714c5247a87d7d63b0d86ff, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7860450088955091341, guid: e6ef9a867714c5247a87d7d63b0d86ff, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00008209433
       objectReference: {fileID: 0}
     - target: {fileID: 7986568675915947072, guid: e6ef9a867714c5247a87d7d63b0d86ff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

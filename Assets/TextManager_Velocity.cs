@@ -40,6 +40,9 @@ public class TextManager_Velocity : MonoBehaviour
     [SerializeField] private GameObject traj_solutionPanel;
     [SerializeField] private GameObject vel_solutionPanel;
 
+    [SerializeField] private TMP_Text chapterName;
+    [SerializeField] private TMP_Text levelName;
+
     private void Awake()
     {
         
@@ -59,6 +62,9 @@ public class TextManager_Velocity : MonoBehaviour
         play = false;
         exclamationMark_Traj.SetActive(false);
         exclamationMark_Vel.SetActive(false);
+
+        chapterName.text = LevelManger.Instance.chapterName;
+        levelName.text = LevelManger.Instance.levelName;
     }
 
     private void OnEnable()
