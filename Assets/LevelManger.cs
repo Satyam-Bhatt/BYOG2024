@@ -6,6 +6,8 @@ using TMPro;
 
 public class LevelManger : MonoBehaviour
 {
+    
+
     private static LevelManger _instance;
     public static LevelManger Instance
     {
@@ -30,6 +32,11 @@ public class LevelManger : MonoBehaviour
 
     [SerializeField] private GameObject[] toDisable;
     [SerializeField] private GameObject[] toEnable;
+
+    [Space(10)]
+    [Header("FOR VELOCITY LEVEL ONLY")]
+    public string trajSolution = "";
+    public string velSolution = "";
 
     public void CoinCheck()
     {

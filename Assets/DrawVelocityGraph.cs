@@ -26,10 +26,12 @@ public class DrawVelocityGraph : MonoBehaviour
             if (!float.IsNaN(v_Value))
             {
                 velocityPoints[i].localPosition = new Vector3(t, v_Value, 0);
+                TextManager_Velocity.Instance.exclamationMark_Vel.SetActive(false);
             }
             else
             {
                 velocityPoints[i].localPosition = new Vector3(0, 0, 0);
+                TextManager_Velocity.Instance.exclamationMark_Vel.SetActive(true);
                 Debug.LogError("Failed to evaluate expression");
             }
             t += tinc;

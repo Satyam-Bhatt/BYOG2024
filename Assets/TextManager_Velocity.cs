@@ -28,7 +28,8 @@ public class TextManager_Velocity : MonoBehaviour
 
     public bool play = false;
 
-    public GameObject exclamationMark;
+    public GameObject exclamationMark_Traj;
+    public GameObject exclamationMark_Vel;
     public GameObject winPanel;
 
     [SerializeField] private GameObject trajText;
@@ -36,7 +37,8 @@ public class TextManager_Velocity : MonoBehaviour
 
     [SerializeField] private TMP_Text[] textBoxes;
 
-    [SerializeField] private GameObject solutionPanel;
+    [SerializeField] private GameObject traj_solutionPanel;
+    [SerializeField] private GameObject vel_solutionPanel;
 
     private void Awake()
     {
@@ -46,9 +48,17 @@ public class TextManager_Velocity : MonoBehaviour
     private void Start()
     {
         textBoxes = new TMP_Text[trajText.transform.childCount];
-        solutionPanel.SetActive(false);
+        for (int i = 0; i < textBoxes.Length; i++)
+        {
+            textBoxes[i] = trajText.transform.GetChild(i).GetComponent<TMP_Text>();
+        }
+        velocity = false;
+
+        traj_solutionPanel.SetActive(false);
+        vel_solutionPanel.SetActive(false);
         play = false;
-        exclamationMark.SetActive(false);
+        exclamationMark_Traj.SetActive(false);
+        exclamationMark_Vel.SetActive(false);
     }
 
     private void Update()
@@ -130,13 +140,16 @@ public class TextManager_Velocity : MonoBehaviour
         CombineText();
     }
 
-    public void SolutionReveal(string strTraj)
+    public void SolutionReveal()
     {
-        solutionPanel.SetActive(true);
-        GameObject g = GameObject.Find("SolutionMain");
-        g.GetComponent<TMP_Text>().text = strTraj;
-        trajectoryText = strTraj;
-        //velocityText = strVel;
+        traj_solutionPanel.SetActive(true);
+        vel_solutionPanel.SetActive(true);
+
+        traj_solutionPanel.transform.GetChild(3).GetComponent<TMP_Text>().text = LevelManger.Instance.trajSolution;
+        vel_solutionPanel.transform.GetChild(3).GetComponent<TMP_Text>().text = LevelManger.Instance.velSolution;
+
+        trajectoryText = LevelManger.Instance.trajSolution;
+        velocityText = LevelManger.Instance.velSolution;
     }
 
     public void TrajectoryClicked()

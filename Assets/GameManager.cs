@@ -63,7 +63,14 @@ public class GameManager : MonoBehaviour
     public void NewScene(Scene scene, Scene scene2)
     {
         //Debug.Log("Call");
-        winPanel = TextManager.Instance.winPanel;
+        if (TextManager.Instance != null && TextManager.Instance.winPanel != null)
+        {
+            winPanel = TextManager.Instance.winPanel;
+        }
+        else if (TextManager_Velocity.Instance != null && TextManager_Velocity.Instance.winPanel != null)
+        { 
+            winPanel = TextManager_Velocity.Instance.winPanel;
+        }
     }
 
     

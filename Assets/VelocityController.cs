@@ -41,13 +41,13 @@ public class VelocityController : MonoBehaviour
             if (!float.IsNaN(y_Value))
             {
                 drawingCircles[i].localPosition = new Vector3(placer, y_Value, 0);
-                TextManager.Instance.exclamationMark.SetActive(false);
+                TextManager_Velocity.Instance.exclamationMark_Traj.SetActive(false);
                 //Debug.Log("Result: " + valueOfY);
             }
             else
             {
                 drawingCircles[i].localPosition = new Vector3(0, 0, 0);
-                TextManager.Instance.exclamationMark.SetActive(true);
+                TextManager_Velocity.Instance.exclamationMark_Traj.SetActive(true);
                 Debug.LogError("Failed to evaluate expression");
             }
         }
@@ -91,7 +91,7 @@ public class VelocityController : MonoBehaviour
             if (LevelManger.Instance.allCoinCollected)
             {
                 GameManager.Instance.winPanel.SetActive(true);
-                TextManager.Instance.play = false;
+                TextManager_Velocity.Instance.play = false;
             }
             Debug.Log("WIN");
         }
