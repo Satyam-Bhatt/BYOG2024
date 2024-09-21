@@ -13,9 +13,9 @@ public class VelocityController : MonoBehaviour
     float valueOfX = 0;
     float valueOfY = 0;
     float SumTime = 0;
-    
 
-    public string velocityEquation = "";
+
+    public string velocityEquation = "5*x";
 
     CustomExpressionEvaluator evaluator;
 
@@ -29,29 +29,38 @@ public class VelocityController : MonoBehaviour
 
     private void Update()
     {
-        
 
-        for (int i = 0; i < drawingCircles.Length; i++)
+        //DRAWING TRAJECTORY
+        float detail = 260;
+        for (int i = 0; i < detail; i++)
         {
-            float y_Value = evaluator.EvaluateExpression(TextManager.Instance.combinedText, i);
+            float placer = (i / detail) * 12;
+            if (i >= drawingCircles.Length - 1)
+            {
+                break;
+            }
+            float y_Value = evaluator.EvaluateExpression(TextManager.Instance.combinedText, placer);
             if (!float.IsNaN(y_Value))
             {
-                drawingCircles[i].localPosition = new Vector3(i, y_Value, 0);
+                drawingCircles[i].localPosition = new Vector3(placer, y_Value, 0);
+                TextManager.Instance.exclamationMark.SetActive(false);
                 //Debug.Log("Result: " + valueOfY);
             }
             else
             {
                 drawingCircles[i].localPosition = new Vector3(0, 0, 0);
+                TextManager.Instance.exclamationMark.SetActive(true);
                 Debug.LogError("Failed to evaluate expression");
             }
         }
 
-        float tinc=5.6f/VelocityCircles.Length;
-        float Yscale = 0.5f;
+        //DRAWING VELOCITY
+        float tinc = 15.0f / VelocityCircles.Length;
+        float Yscale = 1.0f;
         float t = 0;
         for (int i = 0; i < VelocityCircles.Length; i++)
         {
-            float v_Value = Yscale* evaluator.EvaluateExpression(velocityEquation, t);
+            float v_Value = Yscale * evaluator.EvaluateExpression(velocityEquation, t);
             if (!float.IsNaN(v_Value))
             {
                 VelocityCircles[i].localPosition = new Vector3(t, v_Value, 0);
@@ -61,23 +70,23 @@ public class VelocityController : MonoBehaviour
                 VelocityCircles[i].localPosition = new Vector3(0, 0, 0);
                 Debug.LogError("Failed to evaluate expression");
             }
-            t+=tinc;
+            t += tinc;
         }
 
-        if (Input.GetKey(KeyCode.Q))
+        if (TextManager.Instance.play)
         {
             SumTime += Time.deltaTime;
-            if (velocityEquation == "")
+
+            /*f (velocityEquation == "")
             {
                 valueOfX = SumTime;
-                Debug.Log("emptu Strig");
-
             }
-                
             else
-                valueOfX += evaluator.EvaluateExpression(velocityEquation, SumTime) * Time.deltaTime;
+            {
+                }*/
 
-            //valueOfX = EvaluateX();
+            valueOfX += Time.deltaTime * evaluator.EvaluateExpression(velocityEquation, SumTime);
+
 
             //Debug.Log(TextManager.Instance.combinedText);
             valueOfY = evaluator.EvaluateExpression(TextManager.Instance.combinedText, valueOfX);
@@ -85,7 +94,7 @@ public class VelocityController : MonoBehaviour
             if (!float.IsNaN(valueOfY))
             {
                 start.localPosition = new Vector3(valueOfX, valueOfY, 0);
-                
+                //Debug.Log("Result: " + valueOfY);
             }
             else
             {
@@ -98,9 +107,13 @@ public class VelocityController : MonoBehaviour
         //valueOfY = func; //valueOfX % 2; //Mathf.Sin(valueOfX);
 
         //Distance Check Between 2 Objects --------------WIN CONDITION--------------
-        if (Vector2.Distance(start.localPosition, end.localPosition) < 0.01f)
+        if (Vector2.Distance(start.localPosition, end.localPosition) < 0.05f)
         {
-            GameManager.Instance.winPanel.SetActive(true);
+            if (LevelManger.Instance.allCoinCollected)
+            {
+                GameManager.Instance.winPanel.SetActive(true);
+                TextManager.Instance.play = false;
+            }
             Debug.Log("WIN");
         }
         if (spike != null && Vector2.Distance(start.localPosition, spike.localPosition) < 0.01f)
