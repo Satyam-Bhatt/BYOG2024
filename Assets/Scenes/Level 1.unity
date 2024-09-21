@@ -6023,6 +6023,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &499648789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2006739350769634445, guid: e6ef9a867714c5247a87d7d63b0d86ff, type: 3}
+  m_PrefabInstance: {fileID: 8263627389095747058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &502988521
 GameObject:
   m_ObjectHideFlags: 0
@@ -8144,6 +8149,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allCoinCollected: 0
+  toDisable:
+  - {fileID: 499648789}
+  - {fileID: 1119907199}
+  toEnable:
+  - {fileID: 2113499985}
 --- !u!4 &684812287
 Transform:
   m_ObjectHideFlags: 0
@@ -12853,6 +12863,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1119907199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3096846873038633141, guid: e6ef9a867714c5247a87d7d63b0d86ff, type: 3}
+  m_PrefabInstance: {fileID: 8263627389095747058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1121851057
 GameObject:
   m_ObjectHideFlags: 0
@@ -19308,8 +19323,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 203163327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24189,6 +24204,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2113499985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5279821720488037941, guid: e6ef9a867714c5247a87d7d63b0d86ff, type: 3}
+  m_PrefabInstance: {fileID: 8263627389095747058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2118943392
 GameObject:
   m_ObjectHideFlags: 0
@@ -25127,7 +25147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5106665700533312529, guid: e6ef9a867714c5247a87d7d63b0d86ff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.4334106
+      value: -2.4333496
       objectReference: {fileID: 0}
     - target: {fileID: 5646031048110818289, guid: e6ef9a867714c5247a87d7d63b0d86ff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

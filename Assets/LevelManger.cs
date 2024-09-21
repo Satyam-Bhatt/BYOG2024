@@ -22,6 +22,9 @@ public class LevelManger : MonoBehaviour
 
     public bool allCoinCollected = false;
 
+    [SerializeField] private GameObject[] toDisable;
+    [SerializeField] private GameObject[] toEnable;
+
     public void CoinCheck()
     {
         int num = FindObjectsOfType<CoinCollectScript>().Count();
@@ -35,7 +38,14 @@ public class LevelManger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (GameObject obj in toDisable)
+        {
+            obj.SetActive(false);
+        }
+        foreach (GameObject obj in toEnable)
+        { 
+            obj.SetActive(true);
+        }
     }
 
     // Update is called once per frame

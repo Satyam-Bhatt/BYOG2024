@@ -48,7 +48,7 @@ public class TrajectoryController : MonoBehaviour
 
         if (TextManager.Instance.play)
         {
-            valueOfX += Time.deltaTime * 5f;
+            valueOfX += Time.deltaTime;
 
             //Debug.Log(TextManager.Instance.combinedText);
             valueOfY = evaluator.EvaluateExpression(TextManager.Instance.combinedText, valueOfX);
@@ -68,7 +68,7 @@ public class TrajectoryController : MonoBehaviour
         //valueOfY = func; //valueOfX % 2; //Mathf.Sin(valueOfX);
 
         //Distance Check Between 2 Objects --------------WIN CONDITION--------------
-        if (Vector2.Distance(start.localPosition, end.localPosition) < 0.05f)
+        if (Vector2.Distance(start.localPosition, end.localPosition) < 0.1f)
         {
             LevelManger.Instance.CoinCheck();
             if (LevelManger.Instance.allCoinCollected)
