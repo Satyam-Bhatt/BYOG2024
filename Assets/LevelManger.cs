@@ -23,6 +23,7 @@ public class LevelManger : MonoBehaviour
 
     public bool allCoinCollected = false;
     public float speed = 1f;
+    public float YScale_velocityGraph = 1f;
     public RaycastHit2D hit;
 
     public GameObject coordinatePlane;
