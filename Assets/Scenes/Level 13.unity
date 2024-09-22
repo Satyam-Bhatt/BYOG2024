@@ -8196,6 +8196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 684812287}
   - component: {fileID: 684812286}
+  - component: {fileID: 684812288}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -8218,6 +8219,7 @@ MonoBehaviour:
   allCoinCollected: 0
   speed: 1
   YScale_velocityGraph: 1
+  audioSource: {fileID: 0}
   coordinatePlane: {fileID: 0}
   toDisable:
   - {fileID: 6364844670236927303}
@@ -8230,8 +8232,14 @@ MonoBehaviour:
   - {fileID: 4317822510879560647}
   chapterName: Chapter 1
   levelName: Level 13
+  trajectory_OnlySolution: 
   trajSolution: 0
   velSolution: 0-5
+  audioCaption:
+  - audioClip: {fileID: 0}
+    caption: 
+  - audioClip: {fileID: 0}
+    caption: 
 --- !u!4 &684812287
 Transform:
   m_ObjectHideFlags: 0
@@ -8247,6 +8255,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &684812288
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684812285}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &686570078
 GameObject:
   m_ObjectHideFlags: 0
@@ -10252,8 +10356,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 203163327}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10277,7 +10381,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e93551c92b0f690468dc5644c832d452, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25376,7 +25480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6397217612069991938, guid: 60831828289d68244b01db44e6dbfcfb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000010329965
+      value: 0.0003896198
       objectReference: {fileID: 0}
     - target: {fileID: 6489356988302739977, guid: 60831828289d68244b01db44e6dbfcfb, type: 3}
       propertyPath: m_Pivot.x

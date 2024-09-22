@@ -100,9 +100,19 @@ public class LevelManger : MonoBehaviour
 
     public void ClipPlay_Immediate(int clipIndex)
     {
+        if (clipIndex >= audioCaption.Length)
+            return;
+
         audioSource.Stop();
         audioSource.PlayOneShot(audioCaption[clipIndex].audioClip);
-        TextManager.Instance.captionPanel.SetActive(true);
+        if (TextManager.Instance != null)
+        {
+            TextManager.Instance.captionPanel.SetActive(true);
+        }
+        else if (TextManager_Velocity.Instance != null)
+        { 
+            TextManager_Velocity.Instance.captionPanel.SetActive(true);
+        }
         //captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text = audioCaption[clipIndex].caption;
         float closeTime = audioCaption[clipIndex].audioClip.length;
 
@@ -114,15 +124,36 @@ public class LevelManger : MonoBehaviour
     IEnumerator CloseCaption(float delay)
     {
         yield return new WaitForSeconds(delay);
-        TextManager.Instance.captionPanel.SetActive(false);
+        if (TextManager.Instance != null)
+        {
+            TextManager.Instance.captionPanel.SetActive(false);
+        }
+        else if (TextManager_Velocity.Instance != null)
+        {
+            TextManager_Velocity.Instance.captionPanel.SetActive(false);
+        }
     }
 
     IEnumerator CharacterDialogue(string dialogue)
     {
-        TextManager.Instance.captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text = "";
+        if (TextManager.Instance != null)
+        {
+            TextManager.Instance.captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text = "";
+        }
+        else if (TextManager_Velocity.Instance != null)
+        { 
+            TextManager_Velocity.Instance.captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text = "";
+        }
         foreach (char letter in dialogue.ToCharArray())
         {
-            TextManager.Instance.captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text += letter;
+            if (TextManager.Instance != null)
+            {
+                TextManager.Instance.captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text += letter;
+            }
+            else if (TextManager_Velocity.Instance != null)
+            {
+                TextManager_Velocity.Instance.captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text += letter;
+            }
             yield return new WaitForSeconds(0.1f);
         }
     }

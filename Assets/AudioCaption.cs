@@ -6,5 +6,6 @@ using UnityEngine;
 public class AudioCaption
 {
     public AudioClip audioClip;
+    [TextArea(3, 10)]
     public string caption;
 }

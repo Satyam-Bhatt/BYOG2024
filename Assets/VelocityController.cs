@@ -16,6 +16,8 @@ public class VelocityController : MonoBehaviour
 
     public Transform[] drawingCircles;
 
+    private bool playOnce = true;
+
     private void Start()
     {
         evaluator = new CustomExpressionEvaluator();
@@ -91,8 +93,13 @@ public class VelocityController : MonoBehaviour
                 GameManager.Instance.winPanel.SetActive(true);
                 TextManager_Velocity.Instance.winPanel.SetActive(true);
                 TextManager_Velocity.Instance.play = false;
-            }
 
+                if (playOnce)
+                {
+                    LevelManger.Instance.ClipPlay_Immediate(1);
+                    playOnce = false;
+                }
+            }
         }
 
     }
