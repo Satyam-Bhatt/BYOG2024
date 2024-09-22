@@ -83,6 +83,7 @@ public class TrajectoryController : MonoBehaviour
                 if (LevelManger.Instance.levelName == "Level 40")
                 {
                     TextManager.Instance.endScreen.SetActive(true);
+                    TextManager.Instance.play = false;
                 }
                 else
                 {

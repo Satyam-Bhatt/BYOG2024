@@ -199,6 +199,12 @@ public class TextManager_Velocity : MonoBehaviour
         velocity = false;
     }
 
+    public void PlayAudio(AudioClip clip)
+    {
+        GetComponent<AudioSource>().Stop();
+        GetComponent<AudioSource>().PlayOneShot(clip);
+    }
+
     public void VelocityClicked()
     {
         for (int i = 0; i < textBoxes.Length; i++)

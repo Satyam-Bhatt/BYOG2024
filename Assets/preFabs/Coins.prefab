@@ -252,3 +252,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinValue: 0
   coinText: {fileID: 0}
+  coinSound: {fileID: 8300000, guid: e87aadda67b47f14f9c5a4d7006717de, type: 3}

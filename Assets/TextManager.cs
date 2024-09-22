@@ -130,6 +130,12 @@ public class TextManager : MonoBehaviour
         StartCoroutine(CloseCaption(delay));
     }
 
+    public void PlayAudio(AudioClip clip)
+    {
+        GetComponent<AudioSource>().Stop();
+        GetComponent<AudioSource>().PlayOneShot(clip);
+    }
+
     IEnumerator CloseCaption(float delay)
     {
         yield return new WaitForSeconds(delay);

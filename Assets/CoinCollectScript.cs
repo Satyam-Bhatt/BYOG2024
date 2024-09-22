@@ -8,6 +8,7 @@ public class CoinCollectScript : MonoBehaviour
 {
     [SerializeField] private int coinValue = 0;
     [SerializeField] private TMP_Text coinText;
+    [SerializeField] private AudioClip coinSound;
 
     private void Start()
     {
@@ -21,6 +22,14 @@ public class CoinCollectScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            if (TextManager.Instance != null)
+            {
+                TextManager.Instance.PlayAudio(coinSound);
+            }
+            else if (TextManager_Velocity.Instance != null)
+            {
+                TextManager_Velocity.Instance.PlayAudio(coinSound);
+            }
             coinValue--;
             if (coinValue <= 0)
             {
