@@ -12196,8 +12196,8 @@ MonoBehaviour:
   velSolution: 
   audioCaption:
   - audioClip: {fileID: 8300000, guid: f5ddc4eab05170349858d995c9711232, type: 3}
-    caption: "Ummmm\u2026 Let me think! I had learnt how to control how to control
-      the rise, and how fast to climb."
+    caption: "Ummmm\u2026 Let me think! I had learnt how to control the rise, and
+      how fast to climb."
   - audioClip: {fileID: 8300000, guid: efc31a6ae5e846a4e98613a47708bf75, type: 3}
     caption: This is really fun now! Why didn't they teach maths like this in the
       School!

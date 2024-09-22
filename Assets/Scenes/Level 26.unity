@@ -21396,10 +21396,10 @@ MonoBehaviour:
   audioCaption:
   - audioClip: {fileID: 8300000, guid: 04f4ad00a75bf46439c04a7e9357ca9f, type: 3}
     caption: That new button looks like Greek to me! Oh is it Pi? I wonder why don't
-      they just write 3.14, what is even the difference
+      they just write 3.14, like what is even the difference
   - audioClip: {fileID: 8300000, guid: 451055342d813704eb949c47da0777cd, type: 3}
     caption: "When Pi met Sine for a joyous spin, The ride's excitement did begin.\r\n\rTen
-      Coins I gathered with glee, Lasting treasures, they'll be."
+      coins I gathered with glee, Lasting treasures, they'll be."
 --- !u!4 &1684696218
 Transform:
   m_ObjectHideFlags: 0
