@@ -8240,7 +8240,7 @@ MonoBehaviour:
   - audioClip: {fileID: 8300000, guid: 0b7193f78308a934e8eb14665a7c7a89, type: 3}
     caption: "This one is definitely trying to teach me something new! I\u2019ve
       also got two new buttons."
-  - audioClip: {fileID: 8300000, guid: 2b9fdeb9108ef9b4b91f8c095a64b882, type: 3}
+  - audioClip: {fileID: 8300000, guid: aa9259ffcce8d6744a66bbef024657a2, type: 3}
     caption: "THAT was just Amazing! Now I know something new: how to add an offset
       within the square. I'm sure this will greatly enhance my \u201CMathagical\u201D
       abilities!"
@@ -18982,63 +18982,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1492220123
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1508727539430344601, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 813.25104
-      objectReference: {fileID: 0}
-    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 852.6382
-      objectReference: {fileID: 0}
-    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.184496
-      objectReference: {fileID: 0}
-    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2457177048342231866, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1c92a3335bf42b34a81ab237fb80b5ca, type: 3}
 --- !u!1001 &1524219271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29044,7 +28987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7860450088955091341, guid: e6ef9a867714c5247a87d7d63b0d86ff, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00064346194
+      value: 188.18124
       objectReference: {fileID: 0}
     - target: {fileID: 7986568675915947072, guid: e6ef9a867714c5247a87d7d63b0d86ff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -29228,4 +29171,3 @@ SceneRoots:
   - {fileID: 994484188}
   - {fileID: 238931239}
   - {fileID: 298303594}
-  - {fileID: 1492220123}

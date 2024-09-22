@@ -47,7 +47,11 @@ public class TextManager : MonoBehaviour
         play = false;
         exclamationMark.SetActive(false);
         endScreen.SetActive(false);
-        captionPanel.SetActive(false);
+
+        if (GameManager.Instance.restart)
+        { 
+            captionPanel.SetActive(false);
+        }
 
         chapterName.text = LevelManger.Instance.chapterName;
         levelName.text = LevelManger.Instance.levelName;

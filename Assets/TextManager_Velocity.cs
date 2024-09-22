@@ -69,7 +69,10 @@ public class TextManager_Velocity : MonoBehaviour
 
         chapterName.text = LevelManger.Instance.chapterName;
         levelName.text = LevelManger.Instance.levelName;
-        captionPanel.SetActive(false);
+        if (GameManager.Instance.restart)
+        {
+            captionPanel.SetActive(false);
+        }
     }
 
     private void OnEnable()
