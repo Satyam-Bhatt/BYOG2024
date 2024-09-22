@@ -10580,8 +10580,8 @@ Transform:
   m_GameObject: {fileID: 891203048}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1307, y: 11.68, z: 0}
-  m_LocalScale: {x: 52.0089, y: 1, z: 1}
+  m_LocalPosition: {x: -0.1676, y: 11.8459, z: 0}
+  m_LocalScale: {x: 52.08171, y: 1.3317, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2115214806}
@@ -15238,7 +15238,7 @@ MonoBehaviour:
   - {fileID: 1649735103}
   toEnable:
   - {fileID: 875383351}
-  chapterName: Straight Ahead
+  chapterName: "Straight\u2026but tilted"
   levelName: Level 8
   trajectory_OnlySolution: 2*x
   trajSolution: 

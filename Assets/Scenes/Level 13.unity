@@ -2627,8 +2627,8 @@ Transform:
   m_GameObject: {fileID: 213465532}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -29.12, y: -0.29, z: 0}
-  m_LocalScale: {x: 31.26118, y: 1, z: 1}
+  m_LocalPosition: {x: -29.3072, y: -0.29, z: 0}
+  m_LocalScale: {x: 31.26118, y: 1.3744, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 867018357}
@@ -8234,7 +8234,7 @@ MonoBehaviour:
   levelName: Level 13
   trajectory_OnlySolution: 
   trajSolution: 0
-  velSolution: 0-5
+  velSolution: 0-2
   audioCaption:
   - audioClip: {fileID: 8300000, guid: 8da211c8f632bb54db109c5e2c26a80f, type: 3}
     caption: "Where\u2019s the goal? oh its behind me. How should I go back?"

@@ -25994,7 +25994,7 @@ MonoBehaviour:
   audioCaption:
   - audioClip: {fileID: 8300000, guid: dfe72fdce6f41244c8f7d555cd41d5de, type: 3}
     caption: Such a big boulder! I hope it doesn't fall on me! I will be crushed
-      to Paper!
+      to paper!
   - audioClip: {fileID: 8300000, guid: 68cf5788a04dba148bc903821e8b7afd, type: 3}
     caption: "I should do a PhD in Maths! I will be the next Einstein. Wait wasn\u2019t
       he a physicist? Whatever"

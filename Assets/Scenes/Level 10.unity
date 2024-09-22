@@ -15242,7 +15242,7 @@ MonoBehaviour:
   - {fileID: 8221198267852340460}
   toEnable:
   - {fileID: 875383351}
-  chapterName: Straight Ahead
+  chapterName: "Straight\u2026but tilted"
   levelName: Level 10
   trajectory_OnlySolution: x/3+3
   trajSolution: 
