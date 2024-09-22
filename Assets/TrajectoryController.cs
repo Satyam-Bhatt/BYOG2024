@@ -49,6 +49,8 @@ public class TrajectoryController : MonoBehaviour
 
         if (TextManager.Instance.play)
         {
+            GetComponentInChildren<Animator>().SetBool("Move", true);
+
             valueOfX += Time.deltaTime * LevelManger.Instance.speed;
 
             //Debug.Log(TextManager.Instance.combinedText);
@@ -64,6 +66,10 @@ public class TrajectoryController : MonoBehaviour
                 Debug.LogError("Failed to evaluate expression");
                 valueOfX = 0;
             }
+        }
+        else
+        {
+            GetComponentInChildren<Animator>().SetBool("Move", false);
         }
         //Debug.Log(valueOfY);
         //valueOfY = func; //valueOfX % 2; //Mathf.Sin(valueOfX);
@@ -87,6 +93,7 @@ public class TrajectoryController : MonoBehaviour
 
                 if (callOnce)
                 {
+                    GetComponentInChildren<Animator>().SetBool("Move", false);
                     GameManager.Instance.restart = false;
                     LevelManger.Instance.ClipPlay_Immediate(1);
                     callOnce = false;
