@@ -87,6 +87,7 @@ public class TrajectoryController : MonoBehaviour
 
                 if (callOnce)
                 {
+                    GameManager.Instance.restart = false;
                     LevelManger.Instance.ClipPlay_Immediate(1);
                     callOnce = false;
                 }

@@ -12173,10 +12173,11 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 88427ad15ed12d74eb95a33e85ec807e, type: 3}
+    caption: This world never fails to challenge me! But yes I remember how to descend
+  - audioClip: {fileID: 8300000, guid: f6d37090dda66d04cbfd161189a739bf, type: 3}
+    caption: I was frightened out of my wits by that steep drop, but I used my brain
+      and remembered what I had learned
 --- !u!4 &980187143
 Transform:
   m_ObjectHideFlags: 0

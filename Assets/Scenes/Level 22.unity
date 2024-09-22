@@ -8157,10 +8157,10 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: f334ed372edf07d47b30eb0885e40bdf, type: 3}
+    caption: oh! How can I jump over this?
+  - audioClip: {fileID: 8300000, guid: 19cb503c9ad6dc5499f625dd55a375bf, type: 3}
+    caption: I JUMPED! Did you see that! Now I know how to JUMP over things!
 --- !u!4 &634611515
 Transform:
   m_ObjectHideFlags: 0

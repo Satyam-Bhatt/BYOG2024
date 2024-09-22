@@ -12173,10 +12173,11 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 4015cd26c1877e54bba48db10844497b, type: 3}
+    caption: I can do this one! I know how to offset myself!
+  - audioClip: {fileID: 8300000, guid: 60a3acde95b79b345a903343e35cdfd8, type: 3}
+    caption: "See! This is what I\u2019ve been saying. There\u2019s nothing very
+      difficult in maths\u2014it's just about learning how to connect the dots. Literally!"
 --- !u!4 &980187143
 Transform:
   m_ObjectHideFlags: 0

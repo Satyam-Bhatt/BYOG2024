@@ -21321,10 +21321,13 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 940627063b836c6418c006539ba960f4, type: 3}
+    caption: "Walls! They can\u2019t hold me back,\r\r\nWith math, I\u2019ll find
+      the right track!"
+  - audioClip: {fileID: 8300000, guid: 0cfed354d11c17447940cb7e56d7cfc1, type: 3}
+    caption: Isn't it beautiful? how life puts us in the exact situations we need.
+      No, no, no, not what we think we need but what we actually need to grow and
+      evolve our abilities!
 --- !u!4 &1878424172
 Transform:
   m_ObjectHideFlags: 0

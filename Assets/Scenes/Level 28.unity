@@ -20910,10 +20910,11 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: b6a7cd4aa49d44e459be42e24edd4bc2, type: 3}
+    caption: How can I add an offset here? Witin in the brackets or outside?
+  - audioClip: {fileID: 8300000, guid: fbbb0eb265127ec4a97f2d3e75b85edc, type: 3}
+    caption: Got it! To add an offset, we have to add a Pi value in the Sin function
+      within the brackets!
 --- !u!4 &1684696218
 Transform:
   m_ObjectHideFlags: 0

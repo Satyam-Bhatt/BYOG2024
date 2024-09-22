@@ -7949,10 +7949,10 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 35fb1ce2d0a831c4680f1a2be46938b9, type: 3}
+    caption: How did I reach such a negative Point in my life?
+  - audioClip: {fileID: 8300000, guid: 461af48891cd76b4c9c6cc5e773a53c6, type: 3}
+    caption: How, so ever, I reached here, I was able to MOVE out of it!
 --- !u!4 &684812287
 Transform:
   m_ObjectHideFlags: 0

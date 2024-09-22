@@ -21035,10 +21035,12 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 7bae2c1ddb61edb42a6e0a6df2d4645e, type: 3}
+    caption: I know I have to use Sine, but I need to spread it out more. What did
+      I do earlier when I needed to open up the curve?
+  - audioClip: {fileID: 8300000, guid: 2dff0a82bbac89b45b993268b5aa7654, type: 3}
+    caption: I knew I would figure this out! Now I know how to control how many times
+      to go up and down. Knowledge is true power
 --- !u!4 &1684696218
 Transform:
   m_ObjectHideFlags: 0

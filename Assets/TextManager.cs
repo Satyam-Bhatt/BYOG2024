@@ -33,6 +33,7 @@ public class TextManager : MonoBehaviour
     [SerializeField] private GameObject solutionPanel;
     [SerializeField] private TMP_Text chapterName;
     [SerializeField] private TMP_Text levelName;
+    [SerializeField] private AudioClip[] revealButtonClips;
     public GameObject endScreen;
     public GameObject captionPanel;
 
@@ -56,6 +57,7 @@ public class TextManager : MonoBehaviour
     {
         winPanel.transform.GetChild(1).GetComponent<Button>().onClick.AddListener(NextLevel);
         winPanel.transform.GetChild(2).GetComponent<Button>().onClick.AddListener(QuitGame);
+        winPanel.transform.GetChild(3).GetComponent<Button>().onClick.AddListener(RestartScene);
     }
 
     private void CombineText()
@@ -108,10 +110,34 @@ public class TextManager : MonoBehaviour
 
     public void SolutionReveal()
     {
+        StopAllCoroutines();
         solutionPanel.SetActive(true);
         GameObject g =GameObject.Find("SolutionMain");
         g.GetComponent<TMP_Text>().text = LevelManger.Instance.trajectory_OnlySolution;
         combinedText = LevelManger.Instance.trajectory_OnlySolution;
+
+        GetComponent<AudioSource>().Stop();
+        captionPanel.SetActive(false);
+        LevelManger.Instance.audioSource.Stop();
+        int randomClip = Random.Range(0,revealButtonClips.Length);
+        float delay = revealButtonClips[randomClip].length;
+        GameManager.Instance.gameObject.GetComponent<AudioSource>().volume = 0.025f;
+        GetComponent<AudioSource>().PlayOneShot(revealButtonClips[randomClip]);
+        StartCoroutine(CloseCaption(delay));
+    }
+
+    IEnumerator CloseCaption(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+/*        if (TextManager.Instance != null)
+        {
+            TextManager.Instance.captionPanel.SetActive(false);
+        }
+        else if (TextManager_Velocity.Instance != null)
+        {
+            TextManager_Velocity.Instance.captionPanel.SetActive(false);
+        }*/
+        GameManager.Instance.gameObject.GetComponent<AudioSource>().volume = 0.2f;
     }
 
     public void Play()
@@ -121,6 +147,7 @@ public class TextManager : MonoBehaviour
 
     public void RestartScene()
     {
+        GameManager.Instance.restart = true;
         GameManager.Instance.RestartScene();
     }
 

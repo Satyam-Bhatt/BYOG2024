@@ -19607,10 +19607,11 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: ffbefd5c77c0464448fa8e9e848577d1, type: 3}
+    caption: S I N, What does this mean? Sin as in wrongdoings? Sin against God?
+  - audioClip: {fileID: 8300000, guid: e2eefdab03bb74143abcf37b967cc6f1, type: 3}
+    caption: That was better than a rollercoaster ride! What a fun! I already like
+      this sine function
 --- !u!4 &1684696218
 Transform:
   m_ObjectHideFlags: 0

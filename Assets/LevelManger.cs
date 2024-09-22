@@ -100,18 +100,21 @@ public class LevelManger : MonoBehaviour
 
     public void ClipPlay_Immediate(int clipIndex)
     {
-        if (clipIndex >= audioCaption.Length)
+        if (clipIndex >= audioCaption.Length || GameManager.Instance.restart)
             return;
 
+        GameManager.Instance.gameObject.GetComponent<AudioSource>().volume = 0.025f;
         audioSource.Stop();
         audioSource.PlayOneShot(audioCaption[clipIndex].audioClip);
         if (TextManager.Instance != null)
         {
             TextManager.Instance.captionPanel.SetActive(true);
+            TextManager.Instance.GetComponent<AudioSource>().Stop();
         }
         else if (TextManager_Velocity.Instance != null)
         { 
             TextManager_Velocity.Instance.captionPanel.SetActive(true);
+            TextManager_Velocity.Instance.GetComponent<AudioSource>().Stop();
         }
         //captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text = audioCaption[clipIndex].caption;
         float closeTime = audioCaption[clipIndex].audioClip.length;
@@ -132,6 +135,7 @@ public class LevelManger : MonoBehaviour
         {
             TextManager_Velocity.Instance.captionPanel.SetActive(false);
         }
+        GameManager.Instance.gameObject.GetComponent<AudioSource>().volume = 0.2f;
     }
 
     IEnumerator CharacterDialogue(string dialogue)
@@ -154,7 +158,7 @@ public class LevelManger : MonoBehaviour
             {
                 TextManager_Velocity.Instance.captionPanel.transform.GetChild(0).GetComponent<TMP_Text>().text += letter;
             }
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.02f);
         }
     }
 }

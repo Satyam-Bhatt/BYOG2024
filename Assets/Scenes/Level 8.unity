@@ -15222,10 +15222,12 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 43248d70f9435b3449f6e1b83d22e73a, type: 3}
+    caption: "Look! there are new buttons in the palette. I\u2019ve got to see what
+      they do!"
+  - audioClip: {fileID: 8300000, guid: 1855a3839c9f1b0409b3fb5cee378bdb, type: 3}
+    caption: "WOW! I just learnt how to climb up more and more! I\u2019ve come such
+      a long way from where I started!"
 --- !u!4 &1296735954
 Transform:
   m_ObjectHideFlags: 0

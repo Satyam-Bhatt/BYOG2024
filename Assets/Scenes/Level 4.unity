@@ -18725,10 +18725,12 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 02454a3d41ffcb341afe78ec2b0434e0, type: 3}
+    caption: Now, how in the world am I going to climb up?! But look I have a new
+      button here!
+  - audioClip: {fileID: 8300000, guid: 683b1849ed9a4ed4b832f00db0790dae, type: 3}
+    caption: Ah! I always knew I could do maths. It was just the teacher at school
+      I was afraid of!
 --- !u!4 &1666913873
 Transform:
   m_ObjectHideFlags: 0

@@ -21104,10 +21104,11 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 05e0f7ecacd2a744ab8e114c9952457d, type: 3}
+    caption: How to reach that High? Well, I remember what I used to do when I wanted
+      to go higher!
+  - audioClip: {fileID: 8300000, guid: 4f6c1115ae3d8f64196821c030b40cb8, type: 3}
+    caption: Whenever you want to fly! Multiply, Multiply, Multiply!
 --- !u!4 &1684696218
 Transform:
   m_ObjectHideFlags: 0

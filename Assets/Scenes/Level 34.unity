@@ -1206,10 +1206,12 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 0dac3e9791ae1274db2fdd9ba55125a7, type: 3}
+    caption: This seems very interesting. It looks periodic, with things going up
+      and down, but it also increases steadily upward. What can it be?
+  - audioClip: {fileID: 8300000, guid: 70b30e72bdce1574c900b2f6e660ef23, type: 3}
+    caption: Beautiful! Truly beautiful. Just by adding a cyclic and a climbing function,
+      I got to make such a beautiful movement!
 --- !u!4 &58851552
 Transform:
   m_ObjectHideFlags: 0

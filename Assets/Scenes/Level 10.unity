@@ -15226,10 +15226,12 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 6ddb32e74bdc4d14595ca074f5882ba7, type: 3}
+    caption: This seems tricky. I think I have to use everything I have learnt so
+      far!
+  - audioClip: {fileID: 8300000, guid: fec26e1379d5fc7499c9ef2438c602b7, type: 3}
+    caption: "WOAH HO!!! I combined everything\u2014how to offset, how to control
+      the rise\u2014and I reached my goal"
 --- !u!4 &1296735954
 Transform:
   m_ObjectHideFlags: 0

@@ -20941,10 +20941,13 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 9a31fa106744da743b7567f4a80bf213, type: 3}
+    caption: 'Why do I feel like the end is near? '
+  - audioClip: {fileID: 8300000, guid: 370b9aad48bf224408a5cb333724e544, type: 3}
+    caption: "Ah! that was truly satisfying, gliding through those curves, adjusting
+      the offsets, and controlling the curvatures. We truly began like a Box, didn\u2019t
+      we? Unaware of the beauty of maths around us. But by the end, our mathematical
+      abilities have truly evolved! "
 --- !u!4 &1878424172
 Transform:
   m_ObjectHideFlags: 0

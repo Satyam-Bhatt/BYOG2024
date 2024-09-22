@@ -8446,10 +8446,12 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: aaa92f8487d807140b81278baf5dd791, type: 3}
+    caption: Where is this world getting all these problems from? Seriously, where
+      do all the problems in Maths come from?
+  - audioClip: {fileID: 8300000, guid: 2b9fdeb9108ef9b4b91f8c095a64b882, type: 3}
+    caption: Combining my new knowledge of squaring with an offset with my old knowledge
+      of controlling the rise and tada, I reached my goal!
 --- !u!4 &634611515
 Transform:
   m_ObjectHideFlags: 0

@@ -7985,10 +7985,11 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: e3d78e346f93efd4a9d96d655d94d9ed, type: 3}
+    caption: I can do this! I know how to open out or close in the curve!
+  - audioClip: {fileID: 8300000, guid: 862cfb8b01c1f7d48897ab5aa79c8358, type: 3}
+    caption: A negative step taken for a positive purpose will never lead you to
+      a bad outcome
 --- !u!4 &634611515
 Transform:
   m_ObjectHideFlags: 0

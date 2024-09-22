@@ -7946,10 +7946,10 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 3942770539e1dfd47bef3c42f2150fd5, type: 3}
+    caption: Ummm, I feel like I can do this!
+  - audioClip: {fileID: 8300000, guid: 701b4dfe4d2102a42b918871230e366a, type: 3}
+    caption: 'Uh, that was fairly simple '
 --- !u!4 &684812287
 Transform:
   m_ObjectHideFlags: 0

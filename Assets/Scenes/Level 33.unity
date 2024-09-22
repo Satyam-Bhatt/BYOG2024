@@ -25441,10 +25441,12 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 7b6112c33e26fee4b970807b98034057, type: 3}
+    caption: "Wait a minute, I have seen this one before. Sine made me fly through
+      it. ummm\u2026 How can I do the same with cos now?"
+  - audioClip: {fileID: 8300000, guid: bc19bd799e9c602479223da6fa095423, type: 3}
+    caption: Pi/2 That is the difference between sine and cos. Sin(pi/2 -x) is the
+      same a cos (x)
 --- !u!4 &1684696218
 Transform:
   m_ObjectHideFlags: 0

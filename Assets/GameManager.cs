@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject winPanel;
+    public bool restart = false;
 
     public static GameManager Instance { get; private set; }
 
@@ -31,10 +32,18 @@ public class GameManager : MonoBehaviour
         SceneManager.activeSceneChanged -= NewScene;
     }
 
+    private void Update()
+    {
+        Debug.Log("Restart from update: " + restart);
+    }
+
     public void RestartScene()
     {
+        restart = true;
+        Debug.Log("Restart from game manager: " + restart);
         int sceneNum = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneNum);
+
     }
 
     private void Start()
@@ -53,6 +62,7 @@ public class GameManager : MonoBehaviour
         }
         int sceneNum = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneNum + 1);
+        restart = false;
     }
 
     public void ExitLevel()
@@ -71,6 +81,7 @@ public class GameManager : MonoBehaviour
         { 
             winPanel = TextManager_Velocity.Instance.winPanel;
         }
+        
     }
 
     

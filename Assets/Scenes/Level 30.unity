@@ -25499,10 +25499,11 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: af10ae85d2937ab4b805a55d075be1d3, type: 3}
+    caption: Those big Spikes make it look scary! But I trust my friends, Mr. Sine
+      and Pi.
+  - audioClip: {fileID: 8300000, guid: 3e571eafc2421824a94cce18892b0d8b, type: 3}
+    caption: I may be a box, but its my out of box thinking that has got me so far!
 --- !u!4 &1684696218
 Transform:
   m_ObjectHideFlags: 0

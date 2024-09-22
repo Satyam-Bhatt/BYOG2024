@@ -15217,10 +15217,11 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: aa83007863f227d49a330995a7f495a4, type: 3}
+    caption: I think I can do this! I feel confident.
+  - audioClip: {fileID: 8300000, guid: de7e133a2625832458d02160a4621329, type: 3}
+    caption: "Knowing when to multiply, I could do in a single try,\r\n\rand how
+      to reduce the slide, with my friend Mr. divide\r\n\r"
 --- !u!4 &1296735954
 Transform:
   m_ObjectHideFlags: 0

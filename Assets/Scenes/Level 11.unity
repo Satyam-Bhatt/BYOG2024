@@ -15177,10 +15177,12 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 26c9aabc9e8c4394e9849f2aadb66a1b, type: 3}
+    caption: "Thats scrary! It\u2019s is such a steep fall. I must be carefully or
+      else I will roll like a ball."
+  - audioClip: {fileID: 8300000, guid: f88cee31bf27b7e42b2a74e7f7a32411, type: 3}
+    caption: Phew! That really made me use every bit of my brain. I wonder what this
+      world is training me for!
 --- !u!4 &1296735954
 Transform:
   m_ObjectHideFlags: 0

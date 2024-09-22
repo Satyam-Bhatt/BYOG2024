@@ -20380,10 +20380,14 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: d4a374c1e6bdbba45a34e2747e9ce68c, type: 3}
+    caption: "ummm\u2026. How can I add that little offset? Inside the bracket? or
+      Outside?"
+  - audioClip: {fileID: 8300000, guid: 9b38097900ebaf1439e2b3f7846a9326, type: 3}
+    caption: 'Sine and cos make me go Up and Down, Up and down, Up and Down!
+
+      Sine
+      and cos make me go Up and Down, all through the graph!'
 --- !u!4 &1684696218
 Transform:
   m_ObjectHideFlags: 0

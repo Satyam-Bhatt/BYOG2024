@@ -12212,10 +12212,12 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 47d10ee50fdb9794993d45c703a38d9d, type: 3}
+    caption: I do know how to climb up, but there is an obstacle in my way. Also,
+      look! My friend Mr. X is wearing a '2' for a hat!
+  - audioClip: {fileID: 8300000, guid: c4d86fb4398164544b91e052b20d5522, type: 3}
+    caption: "Mr. X, with power '2,' helped me out, He took me up, without a doubt,\r\n\rIn
+      a way that was truly worthwhile, He lifted me up\u2014but with style!\"\r\n\r\n"
 --- !u!4 &980187143
 Transform:
   m_ObjectHideFlags: 0

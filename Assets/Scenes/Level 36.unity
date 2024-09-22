@@ -8123,10 +8123,11 @@ MonoBehaviour:
   trajSolution: x
   velSolution: sin(x) * 3
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 7ad80a5aa203b414dab184951cfa9d90, type: 3}
+    caption: I am confident I can do this. Climbing straight up with a repetition!
+  - audioClip: {fileID: 8300000, guid: 60846c18e0418b6478942ad5a50ad514, type: 3}
+    caption: "I can control where I go, I can regulate my flow.\r\n\rWho needs human
+      brains? Not me!\r\nI\u2019m a box with math skills\u2014can\u2019t you see?\""
 --- !u!4 &684812287
 Transform:
   m_ObjectHideFlags: 0

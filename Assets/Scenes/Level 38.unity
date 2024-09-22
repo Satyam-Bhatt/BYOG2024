@@ -21189,10 +21189,13 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 4716393da34e62a4997089b150a45c25, type: 3}
+    caption: How to get inside a room with no doors?! well just use maths.
+  - audioClip: {fileID: 8300000, guid: fa3bb0c7d2afe1145a9f97662dcd8803, type: 3}
+    caption: "I pity those who don't understand maths! I mean, how difficult is it
+      to grasp that 'mod' is just taking a remainder? like x % 10 gives you what\u2019s
+      left when you divide x by 10. So if x is 27 and you divide that by 10 you will
+      be left with 7!"
 --- !u!4 &1878424172
 Transform:
   m_ObjectHideFlags: 0

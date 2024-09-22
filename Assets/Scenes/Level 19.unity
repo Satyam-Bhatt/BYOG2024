@@ -7985,10 +7985,11 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 9ffd5aaa15a64c44881acd368fd9b384, type: 3}
+    caption: I feel like I am getting a hang of it now!
+  - audioClip: {fileID: 8300000, guid: 9288d2efb9510bc448a94bf220eb71ce, type: 3}
+    caption: Let's Summarize! I add and subtract to move myself up or down, then
+      I multiply and divide to determine how open or closed the curve is!
 --- !u!4 &634611515
 Transform:
   m_ObjectHideFlags: 0

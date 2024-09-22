@@ -96,6 +96,7 @@ public class VelocityController : MonoBehaviour
 
                 if (playOnce)
                 {
+                    GameManager.Instance.restart = false;
                     LevelManger.Instance.ClipPlay_Immediate(1);
                     playOnce = false;
                 }

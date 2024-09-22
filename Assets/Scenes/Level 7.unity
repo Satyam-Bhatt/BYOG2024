@@ -18726,10 +18726,13 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 2cfff7d0acbdb7f47b4d72103bbe3012, type: 3}
+    caption: "I know how to do this one! And if I can\u2019t, no wrroies, there\u2019s
+      always the \u2018reveal solution\u2019 button to help me out!"
+  - audioClip: {fileID: 8300000, guid: 9635d68dac0024646a4800044335f186, type: 3}
+    caption: See! I learnt how to add the offset and then how to go down. And then
+      With my clever brain, I put it all together and there you go, I reached my
+      goal!
 --- !u!4 &1666913873
 Transform:
   m_ObjectHideFlags: 0

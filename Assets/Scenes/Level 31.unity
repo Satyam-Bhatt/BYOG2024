@@ -24862,10 +24862,13 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: ea741f8d44a0968438ad14eb1e7319aa, type: 3}
+    caption: Where did Sin go? and who is this COS instead? Did he take my friend
+      Sin away?
+  - audioClip: {fileID: 8300000, guid: 44a75073069d827479ff82edcff06400, type: 3}
+    caption: "Phew! I am relieved. Cos is just like sine. I think they are twins.
+      Faternal twins. They\u2019re similar but a bit different; one starts at 0 and
+      the other at 1. But both behave the same way, going up and down!"
 --- !u!4 &1684696218
 Transform:
   m_ObjectHideFlags: 0

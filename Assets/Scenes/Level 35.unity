@@ -8215,10 +8215,12 @@ MonoBehaviour:
   trajSolution: 0
   velSolution: sin(x) * 3
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 4d98035b1fb82b242b83c79f5fd951d1, type: 3}
+    caption: A Velocity Level! There are very few of these. Let's see how can I take
+      that coin twice!
+  - audioClip: {fileID: 8300000, guid: 595f123fd0933e0479b52bcfb8ebd459, type: 3}
+    caption: Of course, I had to use sine or cos. How else could make else could
+      I make a repetitive Movement!
 --- !u!4 &684812287
 Transform:
   m_ObjectHideFlags: 0

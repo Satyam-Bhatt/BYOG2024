@@ -18731,10 +18731,13 @@ MonoBehaviour:
   trajSolution: 
   velSolution: 
   audioCaption:
-  - audioClip: {fileID: 0}
-    caption: 
-  - audioClip: {fileID: 0}
-    caption: 
+  - audioClip: {fileID: 8300000, guid: 979f702e34e705e4f97fe54407cdeef2, type: 3}
+    caption: Let me see, I know how to climb up, but I am also shifted a little bit
+      up.
+  - audioClip: {fileID: 8300000, guid: 8b9bf7f280bad384a81e7572022f604a, type: 3}
+    caption: "ummm, Interesting, so when I\u2019m shifted up, I just have to add
+      that number, and and I will continue to climb up. That is a new learning I
+      will take note of!"
 --- !u!4 &1666913873
 Transform:
   m_ObjectHideFlags: 0
