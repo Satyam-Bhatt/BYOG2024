@@ -75,6 +75,10 @@ public class TextManager : MonoBehaviour
         {
             combinedText += text.text;
         }
+        if (textBoxes[0].text == "0 -" || textBoxes[0].text == "0 +")
+        {
+            textBoxes[0].text = textBoxes[0].text.ToCharArray()[2].ToString();
+        }
 
     }
     public void CommonButton(string str)
