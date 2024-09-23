@@ -7,7 +7,6 @@ public class TrajectoryController : MonoBehaviour
 {
     public Transform start;
     public Transform end;
-    public Transform spike;
 
     float valueOfX = 0;
     float valueOfY = 0;
@@ -15,6 +14,8 @@ public class TrajectoryController : MonoBehaviour
     CustomExpressionEvaluator evaluator;
 
     public Transform[] drawingCircles;
+
+    private bool callOnce = true;
 
     private void Start()
     {
@@ -48,7 +49,9 @@ public class TrajectoryController : MonoBehaviour
 
         if (TextManager.Instance.play)
         {
-            valueOfX += Time.deltaTime * 5f;
+            GetComponentInChildren<Animator>().SetBool("Move", true);
+
+            valueOfX += Time.deltaTime * LevelManger.Instance.speed;
 
             //Debug.Log(TextManager.Instance.combinedText);
             valueOfY = evaluator.EvaluateExpression(TextManager.Instance.combinedText, valueOfX);
@@ -64,22 +67,40 @@ public class TrajectoryController : MonoBehaviour
                 valueOfX = 0;
             }
         }
+        else
+        {
+            GetComponentInChildren<Animator>().SetBool("Move", false);
+        }
         //Debug.Log(valueOfY);
         //valueOfY = func; //valueOfX % 2; //Mathf.Sin(valueOfX);
 
         //Distance Check Between 2 Objects --------------WIN CONDITION--------------
-        if (Vector2.Distance(start.localPosition, end.localPosition) < 0.05f)
+        if (Vector2.Distance(start.localPosition, end.localPosition) < 0.2f)
         {
+            LevelManger.Instance.CoinCheck();
             if (LevelManger.Instance.allCoinCollected)
-            { 
-                GameManager.Instance.winPanel.SetActive(true);
-                TextManager.Instance.play = false;
+            {
+                if (LevelManger.Instance.levelName == "Level 40")
+                {
+                    TextManager.Instance.endScreen.SetActive(true);
+                    TextManager.Instance.play = false;
+                }
+                else
+                {
+                    GameManager.Instance.winPanel.SetActive(true);
+                    TextManager.Instance.winPanel.SetActive(true);
+                    TextManager.Instance.play = false;
+                }
+
+                if (callOnce)
+                {
+                    GetComponentInChildren<Animator>().SetBool("Move", false);
+                    GameManager.Instance.restart = false;
+                    LevelManger.Instance.ClipPlay_Immediate(1);
+                    callOnce = false;
+                }
             }
             Debug.Log("WIN");
-        }
-        if (spike != null && Vector2.Distance(start.localPosition, spike.localPosition) < 0.01f)
-        {
-            Debug.Log("DEAD");
         }
 
     }
