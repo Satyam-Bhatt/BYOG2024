@@ -128,4 +128,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 40.unity
     guid: d19c7438b7f1050428615f3618e0dc4e
+  - enabled: 1
+    path: Assets/Scenes/SliderScene.unity
+    guid: 808d150bfa901264d87016a34ff5e57e
+  - enabled: 1
+    path: Assets/Scenes/GraphScene.unity
+    guid: c491d5a9006b888449feefe4cbe5124a
   m_configObjects: {}
