@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -45,6 +46,8 @@ public class TextManager_Velocity : MonoBehaviour
     [SerializeField] private TMP_Text levelName;
 
     [SerializeField] private AudioClip[] revealButtonClips;
+    [SerializeField] private GameObject levelSelectPanel;
+    private bool pause = false;
 
 
     private void Awake()
@@ -72,6 +75,16 @@ public class TextManager_Velocity : MonoBehaviour
         if (GameManager.Instance.restart)
         {
             captionPanel.SetActive(false);
+        }
+        levelSelectPanel.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pause = !pause;
+            levelSelectPanel.SetActive(pause);
         }
     }
 
@@ -231,5 +244,10 @@ public class TextManager_Velocity : MonoBehaviour
     public void QuitGame()
     {
         GameManager.Instance.ExitLevel();
+    }
+
+    public void LoadScene(int sceneNum)
+    {
+        SceneManager.LoadScene(sceneNum);
     }
 }
