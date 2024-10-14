@@ -37,6 +37,7 @@ public class TextManager : MonoBehaviour
     [SerializeField] private GameObject slider_Parent;
     [SerializeField] private GameObject slider;
     [SerializeField] private GameObject levelSelectPanel;
+    [SerializeField] private GameObject textBox_Highlighter;
     public GameObject endScreen;
     public GameObject captionPanel;
 
@@ -61,6 +62,21 @@ public class TextManager : MonoBehaviour
 
         chapterName.text = LevelManger.Instance.chapterName;
         levelName.text = LevelManger.Instance.levelName;
+
+        foreach (TMP_Text text in textBoxes)
+        {
+            if (text.text == "")
+            {
+                RectTransform rect_Set = textBox_Highlighter.GetComponent<RectTransform>();
+                RectTransform rect_Ref = text.GetComponent<RectTransform>();
+                rect_Set.anchoredPosition = rect_Ref.anchoredPosition;
+                rect_Set.sizeDelta = rect_Ref.sizeDelta;
+
+                //rect_Set.position = rect_Ref.position;
+                Debug.Log(rect_Ref.anchoredPosition);
+                break;
+            }
+        }
     }
 
     private void Update()
@@ -127,6 +143,21 @@ public class TextManager : MonoBehaviour
         if (textBoxes[0].text == "0 -" || textBoxes[0].text == "0 +")
         {
             textBoxes[0].text = textBoxes[0].text.ToCharArray()[2].ToString();
+        }
+
+        foreach (TMP_Text text in textBoxes)
+        {
+            if (text.text == "")
+            {
+                RectTransform rect_Set = textBox_Highlighter.GetComponent<RectTransform>();
+                RectTransform rect_Ref = text.GetComponent<RectTransform>();
+                rect_Set.anchoredPosition = rect_Ref.anchoredPosition;
+                rect_Set.sizeDelta = rect_Ref.sizeDelta;
+
+                //rect_Set.position = rect_Ref.position;
+                Debug.Log(rect_Ref.anchoredPosition);
+                break;
+            }
         }
 
     }
